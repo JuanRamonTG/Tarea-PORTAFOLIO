@@ -12,7 +12,7 @@
   <header>
     <nav>
       <ul>
-        <li><button class="nav-btn" onclick="mostrarPestaña('inicio')">Inicio</button></li>
+        <li><button class="naav-btn" onclick="mostrarPestaña('inicio')">Inicio</button></li>
         <li><button class="nav-btn" onclick="mostrarPestaña('sobre-mi')">Sobre Mí</button></li>
         <li><button class="nav-btn" onclick="mostrarPestaña('proyectos')">Proyectos</button></li>
         <li><button class="nav-btn" onclick="mostrarPestaña('contacto')">Contacto</button></li>
@@ -27,83 +27,89 @@
       <div class="hero">
         <div class="hero-overlay">
           <h1>Bienvenido a Mi Mundo Digital</h1>
-          <p>Explora mis proyectos y habilidades con estilo y pasión.</p>
+          <p>Soy Juan Ramón, un desarrollador de software apasionado por crear soluciones innovadoras.</p>
           <button class="btn" onclick="mostrarPestaña('sobre-mi')">Descubre Más</button>
         </div>
       </div>
-
+    
       <!-- Presentación Personal -->
       <div class="presentacion">
         <div class="imagen-perfil-container">
-          <img src="mm.jpg" alt="Juan Torres" class="imagen-perfil">
+          <img src="mm.jpg" alt="Juan Ramón" class="imagen-perfil">
         </div>
         <div class="texto-presentacion">
-          <h3>Juan Torres</h3>
+          <h3>Juan Ramón</h3>
           <p class="titulo">SOFTWARE DEVELOPER</p>
           <p class="descripcion">
-            Soy un apasionado en la creación de soluciones digitales innovadoras, combinando tecnología y diseño para transformar ideas en realidades.
+            Soy un apasionado en la creación de soluciones digitales innovadoras, combinando tecnología y diseño para transformar ideas en realidades. Mi objetivo es ofrecer experiencias digitales únicas que no solo sean efectivas, sino visualmente impresionantes.
           </p>
         </div>
       </div>
-
-      <!-- Apartados: Habilidades, Intereses y Metas -->
+    
+      <!-- Habilidades, Intereses y Metas -->
       <div class="info-sections">
-        <!-- Habilidades -->
         <div class="info-card">
           <h2>Habilidades</h2>
           <ul class="info-list">
+            <li>JavaScript</li>
+            <li>MySQL</li>
             <li>HTML &amp; CSS</li>
-            <li>JavaScript Python</li>
-            <li>C# &amp; Android Estudio</li>
-            <li>.NET Core</li>
-            <li>Node.js</li>
-            <li>MySQL &amp; MongoDB</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>PHP</li>
           </ul>
         </div>
-        <!-- Intereses -->
         <div class="info-card">
           <h2>Intereses</h2>
           <ul class="info-list">
             <li>Tecnologías emergentes</li>
             <li>Innovación digital</li>
-            <li>Desarrollo de software</li>
             <li>Desarrollo sostenible</li>
+            <li>Desarrollo de software</li>
           </ul>
         </div>
-        <!-- Metas -->
         <div class="info-card">
           <h2>Metas</h2>
           <ul class="info-list">
             <li>Liderar proyectos innovadores</li>
             <li>Contribuir a la comunidad tech</li>
-            <li>Mejorar constantemente mis habilidades</li>
+            <li>Mejorar mis habilidades cada día</li>
             <li>Explorar nuevas tecnologías</li>
           </ul>
         </div>
       </div>
+
+      <div class="contacto">
+        <h2>Conéctemos</h2>
+        <p>Si te interesa mi trabajo o tienes alguna consulta, no dudes en conectarte conmigo a través de LinkedIn.</p>
+        <a href="https://www.linkedin.com/in/juan-ramón-torres-guzmán-5966b8354/" target="_blank" class="btn-linkedin">Visita mi LinkedIn</a>
+      </div>
     </section>
     
+
+    
     <!-- Sección Sobre Mí -->
-<section id="sobre-mi" class="pestaña">
-  <div class="contenido sobre-mi-contenido">
-    <div class="perfil">
-      <div class="perfil-img-container">
-        <img src="mi-imagen.jpg" alt="Juan Torres" class="perfil-img">
-      </div>
-      <div class="perfil-texto">
-        <h2>Juan Torres</h2>
-        <p>
-          Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.
-        </p>
-        <div class="cv-buttons">
-          <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>
-          <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>
+    <section id="sobre-mi" class="pestaña">
+      <div class="contenido sobre-mi-contenido">
+        <div class="perfil">
+          <div class="perfil-img-container">
+            <img src="mi-imagen.jpg" alt="Juan Torres" class="perfil-img">
+          </div>
+          <div class="perfil-texto">
+            <h2>Juan Torres</h2>
+            <p>
+              Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.
+            </p>
+            <div class="cv-buttons">
+              <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>
+              <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>
+            </div>
+          </div>
         </div>
+        <button class="btn secondary" onclick="mostrarPestaña('inicio')">Volver al Inicio</button>
       </div>
-    </div>
-    <button class="btn secondary" onclick="mostrarPestaña('inicio')">Volver al Inicio</button>
-  </div>
-</section>
+    </section>
+    
 
     
     <!-- Sección Proyectos -->
