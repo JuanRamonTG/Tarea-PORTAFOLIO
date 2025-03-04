@@ -21,7 +21,63 @@
     <div class="contenido">
       <h2>Bienvenido a mi Portafolio</h2>
       <p>Explora más sobre mí y mis habilidades profesionales.</p>
-      <button class="btn" onclick="mostrarPestaña('sobre-mi')">Conocer más sobre mí</button>
+      
+      <!-- Nueva sección para presentación -->
+      <div class="presentacion">
+        <div class="imagen-perfil-container">
+          <img src="mm.jpg" alt="Juan Torres" class="imagen-perfil">
+        </div>
+        <div class="texto-presentacion">
+          <h3>Juan Torres</h3>
+          <p>SOFTWARE DEVELOPER</p>
+        </div>
+      </div>
+  
+      <!-- Nueva sección para habilidades y recursos -->
+      <div class="habilidades-recursos">
+        <h3>Mis Habilidades</h3>
+        <div class="habilidades-lista">
+          <div class="habilidad">
+            <div class="icono"><i class="fa fa-cogs"></i></div>
+            <h4>.NET Core</h4>
+            <p>Desarrollo de aplicaciones web rápidas y escalables utilizando el poder de .NET Core.</p>
+          </div>
+          <div class="habilidad">
+            <div class="icono"><i class="fa fa-database"></i></div>
+            <h4>MySQL</h4>
+            <p>Sistema de gestión de bases de datos relacional robusto, ideal para manejar grandes cantidades de datos.</p>
+          </div>
+          <div class="habilidad">
+            <div class="icono"><i class="fa fa-html5"></i></div>
+            <h4>HTML & CSS</h4>
+            <p>Maquetación web semántica y diseño responsivo con HTML5 y CSS3 para una experiencia óptima.</p>
+          </div>
+          <div class="habilidad">
+            <div class="icono"><i class="fa fa-js"></i></div>
+            <h4>JavaScript</h4>
+            <p>Creación de interactividad y dinamismo en páginas web utilizando JavaScript moderno.</p>
+          </div>
+        </div>
+  
+        <h3>Herramientas y Recursos</h3>
+        <div class="recursos-lista">
+          <div class="recurso">
+            <div class="icono"><i class="fa fa-code"></i></div>
+            <h4>Visual Studio Code</h4>
+            <p>El editor de código más popular y potente para desarrollo web, con extensiones personalizadas.</p>
+          </div>
+          <div class="recurso">
+            <div class="icono"><i class="fa fa-github"></i></div>
+            <h4>GitHub</h4>
+            <p>Gestión de versiones y colaboración en proyectos con el control de versiones distribuido de Git.</p>
+          </div>
+          <div class="recurso">
+            <div class="icono"><i class="fa fa-bootstrap"></i></div>
+            <h4>Bootstrap</h4>
+            <p>Framework de CSS que facilita el diseño de interfaces modernas y responsivas.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,14 +89,22 @@
           <img src="mi-imagen.jpg" alt="Imagen de [Tu Nombre]" class="imagen-perfil">
         </div>
         <div class="descripcion">
-          <p>Hola, soy [Tu Nombre], un profesional apasionado por [tu campo de especialización]. Con experiencia en [detalles breves sobre tus habilidades y experiencias].</p>
+          <p>Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
         </div>
       </div>
-      <!-- Botones para ver y descargar el CV por separado -->
-      <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>  <!-- Abre el PDF en una nueva pestaña -->
-      <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>  <!-- Forza la descarga del archivo -->
+      <!-- Botones para ver y descargar el CV, centrados y simétricos -->
+      <div class="cv-buttons">
+        <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>  <!-- Abre el PDF en una nueva pestaña -->
+        <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>  <!-- Forza la descarga del archivo -->
+      </div>
       <button class="btn" onclick="mostrarPestaña('inicio')">Volver al inicio</button>
     </div>
   </section>
+
+  <!-- Pie de página con copyright -->
+  <footer>
+    <p>&copy; 2025 Juan Ramon. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
