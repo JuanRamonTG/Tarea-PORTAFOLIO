@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Virtual</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>  <!-- Enlace al archivo JavaScript -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><button class="nav-btn" onclick="mostrarPestaña('inicio')">Inicio</button></li>
+        <li><button class="nav-btn" onclick="mostrarPestaña('sobre-mi')">Sobre Mí</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="pestaña">
+    <div class="contenido">
+      <h2>Bienvenido a mi Portafolio</h2>
+      <p>Explora más sobre mí y mis habilidades profesionales.</p>
+      <button class="btn" onclick="mostrarPestaña('sobre-mi')">Conocer más sobre mí</button>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="pestaña">
+    <div class="contenido sobre-mi-contenido">
+      <h2>Sobre Mí</h2>
+      <div class="perfil">
+        <div class="imagen-contenedor">
+          <img src="mi-imagen.jpg" alt="Imagen de [Tu Nombre]" class="imagen-perfil">
+        </div>
+        <div class="descripcion">
+          <p>Hola, soy [Tu Nombre], un profesional apasionado por [tu campo de especialización]. Con experiencia en [detalles breves sobre tus habilidades y experiencias].</p>
+        </div>
+      </div>
+      <!-- Botones para ver y descargar el CV por separado -->
+      <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>  <!-- Abre el PDF en una nueva pestaña -->
+      <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>  <!-- Forza la descarga del archivo -->
+      <button class="btn" onclick="mostrarPestaña('inicio')">Volver al inicio</button>
+    </div>
+  </section>
+</body>
+</html>

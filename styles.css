@@ -1,0 +1,124 @@
+/* Reset de algunos márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #1e3a8a;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-btn {
+    background-color: #ffffff;
+    border: none;
+    color: #1e3a8a;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-btn:hover {
+    background-color: #d1d5db;
+  }
+  
+  section {
+    padding: 40px 10%;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .contenido {
+    text-align: center;
+  }
+  
+  .pestaña {
+    display: none; /* Ocultar todas las secciones por defecto */
+  }
+  
+  .pestaña.active {
+    display: block; /* Mostrar solo la sección activa */
+  }
+  
+  .btn {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #3b82f6;
+  }
+  
+  .sobre-mi-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagen-contenedor {
+    margin-bottom: 20px;
+  }
+  
+  .imagen-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1e3a8a;
+  }
+  
+  .descripcion {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .descripcion p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
