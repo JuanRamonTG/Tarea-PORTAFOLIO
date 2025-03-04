@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Virtual</title>
+  <title>Portafolio Visualmente Bonito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>  <!-- Enlace al archivo JavaScript -->
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -13,98 +14,146 @@
       <ul>
         <li><button class="nav-btn" onclick="mostrarPestaña('inicio')">Inicio</button></li>
         <li><button class="nav-btn" onclick="mostrarPestaña('sobre-mi')">Sobre Mí</button></li>
+        <li><button class="nav-btn" onclick="mostrarPestaña('proyectos')">Proyectos</button></li>
+        <li><button class="nav-btn" onclick="mostrarPestaña('contacto')">Contacto</button></li>
       </ul>
     </nav>
   </header>
+  
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="pestaña active">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-overlay">
+          <h1>Bienvenido a Mi Mundo Digital</h1>
+          <p>Explora mis proyectos y habilidades con estilo y pasión.</p>
+          <button class="btn" onclick="mostrarPestaña('sobre-mi')">Descubre Más</button>
+        </div>
+      </div>
 
-  <section id="inicio" class="pestaña">
-    <div class="contenido">
-      <h2>Bienvenido a mi Portafolio</h2>
-      <p>Explora más sobre mí y mis habilidades profesionales.</p>
-      
-      <!-- Nueva sección para presentación -->
+      <!-- Presentación Personal -->
       <div class="presentacion">
         <div class="imagen-perfil-container">
           <img src="mm.jpg" alt="Juan Torres" class="imagen-perfil">
         </div>
         <div class="texto-presentacion">
           <h3>Juan Torres</h3>
-          <p>SOFTWARE DEVELOPER</p>
+          <p class="titulo">SOFTWARE DEVELOPER</p>
+          <p class="descripcion">
+            Soy un apasionado en la creación de soluciones digitales innovadoras, combinando tecnología y diseño para transformar ideas en realidades.
+          </p>
         </div>
       </div>
-  
-      <!-- Nueva sección para habilidades y recursos -->
-      <div class="habilidades-recursos">
-        <h3>Mis Habilidades</h3>
-        <div class="habilidades-lista">
-          <div class="habilidad">
-            <div class="icono"><i class="fa fa-cogs"></i></div>
-            <h4>.NET Core</h4>
-            <p>Desarrollo de aplicaciones web rápidas y escalables utilizando el poder de .NET Core.</p>
-          </div>
-          <div class="habilidad">
-            <div class="icono"><i class="fa fa-database"></i></div>
-            <h4>MySQL</h4>
-            <p>Sistema de gestión de bases de datos relacional robusto, ideal para manejar grandes cantidades de datos.</p>
-          </div>
-          <div class="habilidad">
-            <div class="icono"><i class="fa fa-html5"></i></div>
-            <h4>HTML & CSS</h4>
-            <p>Maquetación web semántica y diseño responsivo con HTML5 y CSS3 para una experiencia óptima.</p>
-          </div>
-          <div class="habilidad">
-            <div class="icono"><i class="fa fa-js"></i></div>
-            <h4>JavaScript</h4>
-            <p>Creación de interactividad y dinamismo en páginas web utilizando JavaScript moderno.</p>
-          </div>
+
+      <!-- Apartados: Habilidades, Intereses y Metas -->
+      <div class="info-sections">
+        <!-- Habilidades -->
+        <div class="info-card">
+          <h2>Habilidades</h2>
+          <ul class="info-list">
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript Python</li>
+            <li>C# &amp; Android Estudio</li>
+            <li>.NET Core</li>
+            <li>Node.js</li>
+            <li>MySQL &amp; MongoDB</li>
+          </ul>
         </div>
-  
-        <h3>Herramientas y Recursos</h3>
-        <div class="recursos-lista">
-          <div class="recurso">
-            <div class="icono"><i class="fa fa-code"></i></div>
-            <h4>Visual Studio Code</h4>
-            <p>El editor de código más popular y potente para desarrollo web, con extensiones personalizadas.</p>
-          </div>
-          <div class="recurso">
-            <div class="icono"><i class="fa fa-github"></i></div>
-            <h4>GitHub</h4>
-            <p>Gestión de versiones y colaboración en proyectos con el control de versiones distribuido de Git.</p>
-          </div>
-          <div class="recurso">
-            <div class="icono"><i class="fa fa-bootstrap"></i></div>
-            <h4>Bootstrap</h4>
-            <p>Framework de CSS que facilita el diseño de interfaces modernas y responsivas.</p>
-          </div>
+        <!-- Intereses -->
+        <div class="info-card">
+          <h2>Intereses</h2>
+          <ul class="info-list">
+            <li>Tecnologías emergentes</li>
+            <li>Innovación digital</li>
+            <li>Desarrollo de software</li>
+            <li>Desarrollo sostenible</li>
+          </ul>
+        </div>
+        <!-- Metas -->
+        <div class="info-card">
+          <h2>Metas</h2>
+          <ul class="info-list">
+            <li>Liderar proyectos innovadores</li>
+            <li>Contribuir a la comunidad tech</li>
+            <li>Mejorar constantemente mis habilidades</li>
+            <li>Explorar nuevas tecnologías</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección Sobre Mí -->
+<section id="sobre-mi" class="pestaña">
+  <div class="contenido sobre-mi-contenido">
+    <div class="perfil">
+      <div class="perfil-img-container">
+        <img src="mi-imagen.jpg" alt="Juan Torres" class="perfil-img">
+      </div>
+      <div class="perfil-texto">
+        <h2>Juan Torres</h2>
+        <p>
+          Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.
+        </p>
+        <div class="cv-buttons">
+          <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>
+          <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>
         </div>
       </div>
     </div>
-  </section>
+    <button class="btn secondary" onclick="mostrarPestaña('inicio')">Volver al Inicio</button>
+  </div>
+</section>
 
-  <section id="sobre-mi" class="pestaña">
-    <div class="contenido sobre-mi-contenido">
-      <h2>Sobre Mí</h2>
-      <div class="perfil">
-        <div class="imagen-contenedor">
-          <img src="mi-imagen.jpg" alt="Imagen de [Tu Nombre]" class="imagen-perfil">
+    
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="pestaña">
+      <div class="contenido proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="proyectos-grid">
+          <div class="proyecto-card">
+            <img src="proyecto1.jpg" alt="Proyecto 1">
+            <div class="card-overlay">
+              <h3>Proyecto 1</h3>
+              <p>Descripción breve del proyecto.</p>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="proyecto2.jpg" alt="Proyecto 2">
+            <div class="card-overlay">
+              <h3>Proyecto 2</h3>
+              <p>Descripción breve del proyecto.</p>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="proyecto3.jpg" alt="Proyecto 3">
+            <div class="card-overlay">
+              <h3>Proyecto 3</h3>
+              <p>Descripción breve del proyecto.</p>
+            </div>
+          </div>
         </div>
-        <div class="descripcion">
-          <p>Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
-        </div>
+        <button class="btn secondary" onclick="mostrarPestaña('inicio')">Volver al Inicio</button>
       </div>
-      <!-- Botones para ver y descargar el CV, centrados y simétricos -->
-      <div class="cv-buttons">
-        <a href="pdf/cv.pdf" class="btn" target="_blank">Ver CV</a>  <!-- Abre el PDF en una nueva pestaña -->
-        <a href="pdf/cv.pdf" class="btn" download="CV.pdf">Descargar CV</a>  <!-- Forza la descarga del archivo -->
+    </section>
+    
+    <!-- Sección Contacto -->
+    <section id="contacto" class="pestaña">
+      <div class="contenido contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post" class="contacto-form">
+          <input type="text" name="nombre" placeholder="Tu Nombre" required>
+          <input type="email" name="email" placeholder="Tu Email" required>
+          <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+        <button class="btn secondary" onclick="mostrarPestaña('inicio')">Volver al Inicio</button>
       </div>
-      <button class="btn" onclick="mostrarPestaña('inicio')">Volver al inicio</button>
-    </div>
-  </section>
-
-  <!-- Pie de página con copyright -->
+    </section>
+  </main>
+  
   <footer>
-    <p>&copy; 2025 Juan Ramon. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Juan Torres. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>

@@ -1,322 +1,334 @@
-/* Reset de algunos márgenes y paddings */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales del cuerpo */
+/* Estilos Globales */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
   color: #333;
   line-height: 1.6;
 }
 
-/* Estilos del encabezado */
+/* Encabezado y Navegación */
 header {
-  background-color: #1e3a8a;
-  padding: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-.nav-btn {
-  background-color: #ffffff;
-  border: none;
-  color: #1e3a8a;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-btn:hover {
-  background-color: #d1d5db;
-}
-
-/* Sección general */
-section {
-  padding: 40px 10%;
-  margin-top: 20px;
-}
-
-/* Estilos para los títulos */
-h2 {
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 20px;
-}
-
-/* Contenido central */
-.contenido {
-  text-align: center;
-}
-
-.pestaña {
-  display: none; /* Ocultar todas las secciones por defecto */
-}
-
-.pestaña.active {
-  display: block; /* Mostrar solo la sección activa */
-}
-
-/* Botones */
-.btn {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.btn:hover {
-  background-color: #3b82f6;
-}
-
-/* Estilos específicos para la sección "Sobre Mí" */
-.sobre-mi-contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.perfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.imagen-contenedor {
-  margin-bottom: 20px;
-}
-
-.imagen-perfil {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #1e3a8a;
-}
-
-.descripcion {
-  max-width: 600px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.descripcion p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/* Botones para el CV: centrados y con estilo simétrico */
-.cv-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.cv-buttons .btn {
-  margin: 0;
-  padding: 12px 25px;
-}
-
-/* Asegurando que el fondo de las secciones sea atractivo */
-.sobre-mi-contenido {
-  background-color: #f9fafb;
-}
-
-/* Estilos del pie de página */
-footer {
-  background-color: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: relative;
-  bottom: 0;
+  background: rgba(255,255,255,0.95);
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-footer p {
-  font-size: 1rem;
-  margin: 0;
-}
-/* Estilos para las secciones de habilidades y recursos */
-.habilidades-recursos {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.habilidades-recursos h3, .habilidades-recursos h4 {
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.habilidades-lista, .recursos-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.habilidad, .recurso {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.habilidad:hover, .recurso:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.icono {
-  font-size: 3rem;
-  color: #1e3a8a;
-  margin-bottom: 15px;
-}
-
-.habilidad h4, .recurso h4 {
-  font-size: 1.6rem;
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
-
-.habilidad p, .recurso p {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .habilidades-recursos h3 {
-    font-size: 1.8rem;
-  }
-  .habilidades-lista, .recursos-lista {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .habilidades-lista, .recursos-lista {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Estilos para la sección sobre mí */
-.sobre-mi-contenido {
+nav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  list-style: none;
+  padding: 15px 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #333;
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  color: #1e3a8a;
 }
 
-.perfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Secciones */
+.pestaña {
+  display: none;
+  padding: 100px 5% 40px;
+}
+.pestaña.active {
+  display: block;
+}
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.imagen-contenedor {
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
-
-.imagen-perfil {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #1e3a8a;
+.hero-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.hero-overlay .btn {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero-overlay .btn:hover {
+  background: #3b82f6;
 }
 
-.descripcion {
-  max-width: 600px;
-}
-
-.descripcion h2 {
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 10px;
-}
-
-.descripcion p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.descripcion p strong {
-  font-weight: 700;
-  color: #1e3a8a;
-}
-/* Estilos para la presentación */
+/* Presentación Personal */
 .presentacion {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin: 40px 0;
+  background: #fff;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 .imagen-perfil-container {
-  margin-right: 120px;
+  margin-right: 20px;
 }
-
 .imagen-perfil {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #1e3a8a;
 }
-
 .texto-presentacion {
   text-align: left;
 }
-
 .texto-presentacion h3 {
   font-size: 2rem;
   color: #1e3a8a;
   margin-bottom: 10px;
+}
+.texto-presentacion .titulo {
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+.texto-presentacion .descripcion {
+  font-size: 1rem;
+  color: #555;
 }
 
-.texto-presentacion p {
-  font-size: 1.2rem;
+/* Apartados: Habilidades, Intereses y Metas */
+.info-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+.info-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.info-card:hover {
+  transform: translateY(-5px);
+}
+.info-card h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+  font-size: 1.8rem;
+}
+.info-list {
+  list-style: none;
+  text-align: left;
+}
+.info-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   color: #555;
-  font-weight: bold;
+}
+
+/* Sección Sobre Mí */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.perfil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.perfil-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #1e3a8a;
+}
+.perfil-texto {
+  text-align: left;
+}
+.perfil-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+.perfil-texto p {
+  font-size: 1.2rem;
+}
+
+/* Sección Proyectos */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+.proyecto-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.proyecto-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.proyecto-card:hover {
+  transform: scale(1.05);
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30,58,138,0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.proyecto-card:hover .card-overlay {
+  opacity: 1;
+}
+.card-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.card-overlay p {
+  font-size: 1rem;
+}
+
+/* Sección Contacto */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contacto-form input,
+.contacto-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #3b82f6;
+}
+.btn.secondary {
+  background: #ccc;
+  color: #333;
+}
+.btn.secondary:hover {
+  background: #aaa;
+}
+
+/* Footer */
+footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .perfil-texto {
+    text-align: center;
+  }
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .hero-overlay p {
+    font-size: 1.2rem;
+  }
+  .presentacion {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imagen-perfil-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }

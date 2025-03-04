@@ -28,3 +28,9 @@ function mostrarPestaña(pestaña) {
     window.location.href = 'pdf/cv.pdf';  // Esto redirige a la ubicación del archivo y lo descarga
   }
   
+  function mostrarPestaña(id) {
+    const pestañas = document.querySelectorAll('.pestaña');
+    pestañas.forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+  
