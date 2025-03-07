@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .code-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+    overflow-y: auto;
+  }
+  
+  #code-output {
+    white-space: pre-wrap;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    animation: errorAnimation 1s forwards;
+  }
+  
+  @keyframes errorAnimation {
+    0% {
+      color: red;
+    }
+    50% {
+      color: yellow;
+    }
+    100% {
+      color: green;
+    }
+  }
+  
+  .correction {
+    color: green;
+    font-style: italic;
+    display: inline-block;
+  }
+  

@@ -7,182 +7,495 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
     <style>
-        body {
-            background-color: #f1f8ff;
-            font-family: 'Arial', sans-serif;
-        }
-        .nav-tabs {
-            margin-bottom: 20px;
-        }
-        .nav-tabs .nav-link.active {
-            background-color: #4e73df;
-            color: white;
-        }
-        .tab-pane {
-            padding: 30px;
-        }
-        .card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .dropdown-toggle::after {
-            display: none;
-        }
-        .btn-secondary {
-            background-color: #007bff;
-            border-color: #007bff;
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            border-radius: 30px;
-        }
-        .btn-secondary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-        h2, h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #333;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-        .row {
-            margin-top: 20px;
-        }
-        .col-md-4, .col-md-6 {
-            margin-bottom: 20px;
-        }
-        .img-fluid {
-            border-radius: 50%;
-            margin-bottom: 20px;
-            width: 180px;
-            height: 180px;
-            transition: transform 0.3s ease;
-        }
-        .img-fluid:hover {
-            transform: scale(1.1);
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-        .intro-section {
-            background-color: #4e73df;
-            color: white;
-            padding: 60px 40px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: left;
-        }
-        .intro-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-        .intro-section p {
-            font-size: 1.3rem;
-            color: #d1d3e2;
-            margin-bottom: 30px;
-        }
-        .intro-section .btn {
-            background-color: #ff6f61;
-            border-color: #ff6f61;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            transition: background-color 0.3s ease;
-        }
-        .intro-section .btn:hover {
-            background-color: #ff4f40;
-            border-color: #ff4f40;
-        }
-        .about-section {
-            background-color: #f7d1d1;
-            padding: 40px;
-            border-radius: 10px;
-            color: #333;
-            margin-bottom: 30px;
-        }
-        .about-section img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-        .about-section .dropdown-menu {
-            width: 100%;
-            text-align: center;
-        }
-        .about-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .about-section p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-        /* Menú de opciones más estético */
-        .dropdown-menu {
-            border-radius: 10px;
-            background-color: #f8f9fc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown-item {
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-        .dropdown-item:hover {
-            background-color: #ff6f61;
-            color: white;
-        }
+    
+    
+/* Estilos generales */
+body {
+    background-color: hsl(0, 0%, 0%);
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.nav-tabs {
+    margin-bottom: 20px;
+}
+.nav-tabs .nav-link.active {
+    background-color: #ffffff;
+    color: white;
+}
+.tab-pane {
+    padding: 30px;
+}
+.card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.911);
+    margin-bottom: 20px;
+    background-color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.btn-secondary {
+    background-color: #fdfdfd;
+    border-color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+.btn-secondary:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+h2, h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e4e3e3;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+p {
+    font-size: 0.9rem;
+    color: #000000;
+    line-height: 1.6;
+}
+.row {
+    margin-top: 20px;
+}
+.col-md-4, .col-md-6 {
+    margin-bottom: 20px;
+}
+.img-fluid {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.img-fluid:hover {
+    transform: scale(1.1);
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-        /* Nueva sección de contacto */
-        .contact-section {
-            background-color: #f1f8ff;
-            padding: 40px 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .contact-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .contact-section p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        .contact-section .social-links a {
-            font-size: 1.5rem;
-            margin: 0 20px;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-        .contact-section .social-links a:hover {
-            color: #007bff;
-        }
-    </style>
+/* Animación de fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Sección Intro */
+.intro-section {
+    background-color: #727272;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    animation: fadeIn 1s forwards;
+}
+.intro-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+.intro-section p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.intro-section .btn {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 1s ease;
+}
+.intro-section .btn:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Sección Sobre mí */
+.about-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    color: #fafafa;
+    margin-bottom: 30px;
+    animation: fadeIn 1s forwards;
+}
+.about-section img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.about-section .dropdown-menu {
+    width: 100%;
+    text-align: center;
+}
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+.about-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Menú de opciones */
+.dropdown-menu {
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.966);
+}
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+}
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    background-color: #f1f8ff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 2s forwards;
+}
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+.contact-section .social-links a {
+    font-size: 2.5rem;
+    margin: 0 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+.contact-section .social-links a:hover {
+    color: #ffffff;
+}
+
+/* Menú desplegable con estilo */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.815);
+    z-index: 1;
+    border-radius: 8px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-item {
+    color: #495057;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #ddd;
+    color: #ffffff;
+}
+.dropdown-menu {
+    border-radius: 10px;
+}
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-dark:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+}
+
+/* Animación de carga */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader .spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Clase para ocultar elementos inicialmente */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease-out, transform 3s ease-out; /* Animación de aparición lenta */
+}
+
+/* Clase para mostrar elementos */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos de las tarjetas */
+.text-center {
+
+    transition: transform 0.3s ease-in-out; /* Transición solo para el hover */
+}
+
+.contact-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(230, 228, 228, 0.911);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out; /* Transición solo para el hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Animación de hover rápida */
+}
+
+ 
+.nav-link {
+    color: #000000 !important; /* Texto negro siempre */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #000000; /* Contorno negro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición */
+    padding: 10px 15px; /* Ajuste del tamaño del botón */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    transform: scale(1.05); /* Efecto de crecimiento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+.nav-link:focus {
+    background-color: #f0f0f0; /* Color diferente para indicar selección */
+}
+
+
+/* Lluvia de estrellas */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Hace que las estrellas no interfieran con los clics */
+    z-index: -1; /* Coloca las estrellas detrás del contenido */
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    animation: fall 2s infinite linear;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Hace que las estrellas caigan fuera de la pantalla */
+        opacity: 0;
+    }
+}
+
+/* Lluvia de estrellas */
+.stars {
+    position: fixed; /* Hacemos que las estrellas se mantengan fijas en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Hace que las estrellas no interfieran con los clics */
+    z-index: -1; /* Coloca las estrellas detrás del contenido */
+}
+
+/* Las estrellas */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    opacity: 0.8;
+    animation: fall 2s infinite linear;
+}
+
+/* Animación de las estrellas cayendo */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Hace que las estrellas caigan fuera de la pantalla */
+        opacity: 0;
+    }
+}
+
+/* Hacer que cada estrella sea de diferente tamaño y velocidad */
+.star {
+    width: 2px;
+    height: 2px;
+    opacity: 0.7;
+    animation-duration: calc(2s + (random() * 3)) !important;
+    animation-delay: calc(random() * -3) !important;
+}
+
+/* Fondo de estrellas con parallax y parpadeo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    animation: parallax 30s linear infinite, twinkle 1.5s ease-in-out infinite; /* Movimiento y parpadeo */
+}
+
+/* Parallax de fondo */
+@keyframes parallax {
+    0% { background-position: 0 0; }
+    100% { background-position: 5000px 5000px; }
+}
+
+/* Efecto de parpadeo de estrellas */
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* Estrellas flotantes de partículas que parpadean */
+body .stars {
+    position: fixed; /* Usamos fixed para que las estrellas se mantengan visibles mientras se hace scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://cdn.pixabay.com/photo/2016/11/29/13/00/space-1868810_960_720.jpg') repeat;
+    opacity: 0.1;
+    animation: floatStars 10s infinite linear, starTwinkle 1.5s ease-in-out infinite, shootingStar 3s ease-in-out infinite; /* Añadimos estrellas fugaces */
+}
+
+/* Animación de estrellas flotantes */
+@keyframes floatStars {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-500px, -500px); }
+}
+
+/* Animación de parpadeo de las estrellas flotantes */
+@keyframes starTwinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* Efecto de estrellas fugaces */
+@keyframes shootingStar {
+    0% {
+        opacity: 0;
+        transform: translate(-1000px, -1000px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(1000px, 1000px) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(2000px, 2000px);
+    }
+}
+
+
+
+
+
+
+</style>
+
+
+
 </head>
 <body>
     <div class="container mt-4">
@@ -193,62 +506,104 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="about-me-tab" data-bs-toggle="tab" data-bs-target="#about-me" type="button" role="tab">Sobre mí</button>
             </li>
-            
         </ul>
         <div class="tab-content mt-3" id="myTabContent">
             <!-- Inicio -->
             <div class="tab-pane fade show active" id="home" role="tabpanel">
-                <div class="intro-section">
+                <div class="intro-section hidden">
                     <div>
                         <h1>¡Hola! Soy Juan Torres</h1>
                         <p>Software Developer | Apasionado por la tecnología y la innovación</p>
                         <a href="#about-me" class="btn">Conocer más sobre mí</a>
                     </div>
                     <div>
-                        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid">
+                        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid hidden">
                     </div>
                 </div>
-                <div class="row">
-                    <h3>Habilidades de Programación</h3>
+
+                <!-- Habilidades de Programación -->
+                <div class="row mt-4">
+                    <h3 class="text-center hidden">Habilidades de Programación</h3>
                     <div class="col-md-4">
-                        <div class="card p-3 text-center">
+                        <div class="card p-3 text-center hidden">
                             <h5>HTML</h5>
                             <p>Experto en la creación de páginas web con HTML5.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card p-3 text-center">
+                        <div class="card p-3 text-center hidden">
                             <h5>CSS</h5>
                             <p>Diseños responsivos y modernos utilizando CSS3.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card p-3 text-center">
+                        <div class="card p-3 text-center hidden">
                             <h5>JavaScript</h5>
                             <p>Desarrollo de aplicaciones interactivas con JavaScript.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                      <div class="card p-3 text-center">
-                          <h5>Python</h5>
-                          <p>Desarrollo de aplicaciones</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card p-3 text-center">
-                        <h5>Android Studio</h5>
-                        <p>Desarrollo de aplicaciones movil</p>
+                        <div class="card p-3 text-center hidden">
+                            <h5>Python</h5>
+                            <p>Desarrollo de aplicaciones.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Android Studio</h5>
+                            <p>Desarrollo de aplicaciones móviles.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>MySQL</h5>
+                            <p>Desarrollo de bases de datos.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="card p-3 text-center">
-                      <h5>MySQL</h5>
-                      <p>Desarrollo de bases de datos</p>
-                  </div>
-              </div>
+
+                <!-- Habilidades Blandas (solo en la sección de Inicio) -->
+                <div class="row habilidades-blandas">
+                    <h3 class="text-center hidden">Habilidades Blandas</h3>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Comunicación</h5>
+                            <p>Expresa ideas claramente y escucha activamente.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Trabajo en equipo</h5>
+                            <p>Colabora y fomenta un ambiente de cooperación.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Empatía</h5>
+                            <p>Conecta y comprende las emociones de los demás.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Creatividad</h5>
+                            <p>Aborda problemas con soluciones originales e innovadoras.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Adaptabilidad</h5>
+                            <p>Se adapta a cambios y nuevos desafíos con facilidad.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center hidden">
+                            <h5>Resolución de Problemas</h5>
+                            <p>Analiza y soluciona conflictos de manera efectiva.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            <div id="stars-container"></div>
             <!-- Sobre mí -->
             <div class="tab-pane fade" id="about-me" role="tabpanel">
                 <div class="about-section">
@@ -256,29 +611,44 @@
                     <div class="text-center">
                         <img src="profile.jpg" alt="Tu Imagen" class="img-fluid mb-3">
                     </div>
-                    <p>Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.
-                    </p>
+                    <p>Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
                     <div class="dropdown mt-3">
-                      <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                          Opciones de CV
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <li><a class="dropdown-item" href="#" download="cv.pdf">Descargar CV</a></li>
-                          <li><a class="dropdown-item" href="cv.pdf" target="_blank">Ver CV</a></li>
-                      </ul>
-                  </div>
-                  
+                        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            📄 Mi CV
+                        </button>
+                        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
+                                    <i class="fas fa-download text-primary me-2"></i> Descargar
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" target="_blank">
+                                    <i class="fas fa-eye text-success me-2"></i> Ver
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
-            <div class="contact-section">
-              <h2>Contacto</h2>
-              <p>Conéctemos a través de mis perfiles profesionales:</p>
-              <div class="social-links">
-                  <a href="https://github.com/JuanRamonTG" target="_blank" class="fab fa-github"></a>
-                  <a href="https://www.linkedin.com/in/juan-ramón-torres-guzmán-5966b8354" target="_blank" class="fab fa-linkedin"></a>
-              </div>
-            
+        </div>
+        
+        <!-- Sección de Contacto -->
+        <div class="contact-section hidden">
+            <h2>Contacto</h2>
+            <p>Conéctemos a través de mis perfiles profesionales:</p>
+            <div class="social-links">
+                <a href="https://github.com/JuanRamonTG" target="_blank" class="fab fa-github"></a>
+                <a href="https://www.linkedin.com/in/juan-ramón-torres-guzmán-5966b8354" target="_blank" class="fab fa-linkedin"></a>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
