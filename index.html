@@ -488,166 +488,201 @@ body .stars {
 }
 
 
+/* imagen  */
+.imagen-rara {
+  max-width: 250px;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  transition: clip-path 0.5s ease, transform 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.imagen-rara:hover {
+  transform: scale(1.05) rotate(1deg);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
 
 
 
+  [data-es], [data-en] {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: #ccc !important; /* O blanco si prefieres: white */
+        font-weight: bold;
+    }
 
 </style>
 
 
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Torres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            padding-top: 70px; /* para compensar el navbar fijo */
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Inicio</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="about-me-tab" data-bs-toggle="tab" data-bs-target="#about-me" type="button" role="tab">Sobre mí</button>
-            </li>
-        </ul>
-        <div class="tab-content mt-3" id="myTabContent">
-            <!-- Inicio -->
-            <div class="tab-pane fade show active" id="home" role="tabpanel">
-                <div class="intro-section hidden">
-                    <div>
-                        <h1>¡Hola! Soy Juan Torres</h1>
-                        <p>Software Developer | Apasionado por la tecnología y la innovación</p>
-                        <a href="#about-me" class="btn">Conocer más sobre mí</a>
-                    </div>
-                    <div>
-                        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid hidden">
-                    </div>
-                </div>
 
-                <!-- Habilidades de Programación -->
-                <div class="row mt-4">
-                    <h3 class="text-center hidden">Habilidades de Programación</h3>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>HTML</h5>
-                            <p>Experto en la creación de páginas web con HTML5.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>CSS</h5>
-                            <p>Diseños responsivos y modernos utilizando CSS3.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>JavaScript</h5>
-                            <p>Desarrollo de aplicaciones interactivas con JavaScript.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Python</h5>
-                            <p>Desarrollo de aplicaciones.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Android Studio</h5>
-                            <p>Desarrollo de aplicaciones móviles.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>MySQL</h5>
-                            <p>Desarrollo de bases de datos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Habilidades Blandas (solo en la sección de Inicio) -->
-                <div class="row habilidades-blandas">
-                    <h3 class="text-center hidden">Habilidades Blandas</h3>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Comunicación</h5>
-                            <p>Expresa ideas claramente y escucha activamente.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Trabajo en equipo</h5>
-                            <p>Colabora y fomenta un ambiente de cooperación.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Empatía</h5>
-                            <p>Conecta y comprende las emociones de los demás.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Creatividad</h5>
-                            <p>Aborda problemas con soluciones originales e innovadoras.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Adaptabilidad</h5>
-                            <p>Se adapta a cambios y nuevos desafíos con facilidad.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 text-center hidden">
-                            <h5>Resolución de Problemas</h5>
-                            <p>Analiza y soluciona conflictos de manera efectiva.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="stars-container"></div>
-            <!-- Sobre mí -->
-            <div class="tab-pane fade" id="about-me" role="tabpanel">
-                <div class="about-section">
-                    <h2>Sobre mí</h2>
-                    <div class="text-center">
-                        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid mb-3">
-                    </div>
-                    <p>Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            📄 Mi CV
-                        </button>
-                        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
-                                    <i class="fas fa-download text-primary me-2"></i> Descargar
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" target="_blank">
-                                    <i class="fas fa-eye text-success me-2"></i> Ver
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sección de Contacto -->
-        <div class="contact-section hidden">
-            <h2>Contacto</h2>
-            <p>Conéctemos a través de mis perfiles profesionales:</p>
-            <div class="social-links">
-                <a href="https://github.com/JuanRamonTG" target="_blank" class="fab fa-github"></a>
-                <a href="https://www.linkedin.com/in/juan-ramón-torres-guzmán-5966b8354" target="_blank" class="fab fa-linkedin"></a>
-            </div>
+<!-- Menú de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Juan Torres</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a id="navAbout" class="nav-link" href="#sobre-mi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a id="navHome" class="nav-link active" href="#inicio">Inicio</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <script src="script.js"></script>
+</nav>
+
+<div style="position: fixed; top: 80px; right: 20px; z-index: 1050;">
+    <select id="languageSelector" class="form-select form-select-sm shadow rounded-pill">
+      <option value="es">🌐 Español</option>
+      <option value="en">🌐 English</option>
+    </select>
+  </div>
+
+<!-- INICIO / INTRODUCCIÓN -->
+<section id="inicio" class="intro-section text-center hidden">
+    <div class="container">
+      <h1 id="introTitle" class="mb-3">¡Hola! Soy Juan Torres</h1>
+      <p id="introSubtitle" class="lead">
+        Software Developer | Apasionado por la tecnología y la innovación
+      </p>
+    </div>
+  </section>
+  
+
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="mt-5 about-section">
+    <h2 class="text-center"  id="aboutTitle">Sobre mí</h2>
+    <div class="text-center">
+        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid mb-3">
+    </div>
+    <p id="aboutText"> Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
+    
+    <!-- Botón CV -->
+    <div class="dropdown mt-3 text-center">
+        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span id="cvTitle">📄 Mi CV</span>
+        </button>
+        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
+            <li>
+                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
+                    <i class="fas fa-download text-primary me-2"></i> <span id="cvDownload">Descargar</span>
+                </a>
+            </li>
+           
+        </ul>
+    </div>
+</section>
+
+  
+
+<!-- HABILIDADES DE PROGRAMACIÓN -->
+<section class="mt-5">
+    <h3 class="text-center hidden" id="devSkillsTitle">Habilidades de Programación</h3>
+    <div class="row">
+        <!-- tarjetas HTML, CSS, JS, etc. -->
+    </div>
+</section>
+
+<!-- HABILIDADES BLANDAS -->
+<section class="mt-5">
+    <h3 class="text-center hidden" id="softSkillsTitle">Habilidades Blandas</h3>
+    <div class="row">
+        <!-- tarjetas blandas -->
+    </div>
+</section>
+
+<!-- ESTRELLAS DE FONDO -->
+<div id="stars-container"></div>
+
+<!-- CONTACTO -->
+<div class="contact-section hidden">
+    <h2 id="contactTitle">Contacto</h2>
+    <p id="contactText">Conectemos a través de mis perfiles profesionales:</p>
+    <div class="social-links">
+        <a href="https://github.com/JuanRamonTG" target="_blank" class="fab fa-github"></a>
+        <a href="https://www.linkedin.com/in/juan-ramón-torres-guzmán-5966b8354" target="_blank" class="fab fa-linkedin"></a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+
+<script>
+    const translations = {
+      es: {
+        introTitle: "¡Hola! Soy Juan Torres",
+        introSubtitle: "Software Developer | Apasionado por la tecnología y la innovación",
+        aboutTitle: "Sobre mí",
+        aboutText: "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.",
+        cvTitle: "📄 Mi cv",
+        cvDownload: "Descargar",
+        devSkillsTitle: "Habilidades de Programación",
+        softSkillsTitle: "Habilidades Blandas",
+        contactTitle: "Contacto",
+        navAbout: "Sobre mí",
+        navHome: "Inicio",
+        contactText: "Conectemos a través de mis perfiles profesionales:"
+      },
+      en: {
+        introTitle: "Hello! I'm Juan Torres",
+        introSubtitle: "Software Developer | Passionate about technology and innovation",
+        aboutTitle: "About me",
+        aboutText: "Hi, I'm Juan Ramon, a proud Salvadoran with an overwhelming passion for creating digital experiences that merge creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools such as .NET Core, MySQL, HTML, CSS, and JavaScript. My focus is on creating intuitive and attractive interfaces that are not only functional but also visually stunning. I love transforming complex ideas into simple and effective solutions, always seeking innovation in every line of code. I'm also excited to learn new trends and collaborate on projects that leave a significant mark on the digital world.",
+        cvTitle: "📄 My cv",
+        cvDownload: "Download",
+        devSkillsTitle: "Programming Skills",
+        softSkillsTitle: "Soft Skills",
+        contactTitle: "Contact",
+        navAbout: "About me",
+        navHome: "Home",
+        contactText: "Let's connect through my professional profiles:"
+      }
+    };
+  
+    document.getElementById("languageSelector").addEventListener("change", function () {
+      const lang = this.value;
+      for (const key in translations[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = translations[lang][key];
+      }
+    });
+  </script>
+  
+  
+  
+
 </body>
+
+
+        
+       
 </html>
 
 
