@@ -516,6 +516,169 @@ body .stars {
         font-weight: bold;
     }
 
+
+
+            /* Variables */
+:root {
+    --primary-color: #004d40; /* Color principal */
+    --secondary-color: #00796b; /* Color secundario */
+    --accent-color: #ff5722; /* Color de acento */
+    --role-bg: #f1f8e9; /* Fondo para roles */
+    --role-text: #33691e; /* Texto para roles */
+    --text-color: #212121; /* Color de texto principal */
+    --link-color: #0288d1; /* Color de enlaces */
+    --hover-color: #0277bd; /* Color de hover */
+    --card-bg: #ffffff; /* Fondo de tarjetas */
+    --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra de tarjetas */
+}
+
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.projects-section {
+    padding: 40px;
+    background-color: #e0f2f1;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.projects-container hr {
+    border: none;
+    border-top: 2px solid var(--accent-color);
+    width: 50px;
+    margin: 0 auto 20px auto;
+}
+
+/* Carousel */
+.projects-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+.carousel-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.projects-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--card-shadow);
+}
+
+/* Project Card Content */
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.project-role {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.project-tech {
+    margin-top: 10px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.tech-tag:last-child {
+    margin-right: 0;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-link {
+    font-size: 0.9rem;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-track {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 90%;
+    }
+}
+
 </style>
 
 
@@ -779,7 +942,78 @@ body .stars {
     </div>
   </section>
   
-  
+  <div class="projects-section" id="proyect">
+    <div class="projects-container">
+        <h2 class="projects-title" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+        <hr style="border: 1px solid black; margin: 20px;">
+
+        <div class="projects-carousel">
+     
+            
+            <div class="projects-track" id="projectsTrack">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <img src="/recursos/inicio.png" alt="Proyecto 1" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Legal Connect" data-en="Legal Connect">Calculadora Contable</h3>
+                        <p class="project-description" data-es="Sistema integral para la gestión de casos legales con funcionalidades avanzadas." 
+                           data-en="Comprehensive system for legal case management with advanced features.">
+                           El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable
+                        </p>
+
+                        <div class="project-role" style="margin: 10px;padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
+                           
+                            <p style="margin: 0;" data-es="Rol desempeñado: Desarrollador Frontend - Backend y Coordinador de Proyecto." 
+                               data-en="Role: Frontend - Backend Developer and Project Coordinator.">
+                                <strong>Rol desempeñado:</strong> Desarrollador Frontend y Backend.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">CSS</span>
+                           
+                        </div>
+                        <div class="https://github.com/JuanRamonTG/AppCalculadoraa" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="/recursos/huerto.png" alt="Proyecto 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Huerto en Mano" data-en="Huerto en Mano">Huerto en Mano</h3>
+                        <p class="project-description" data-es="Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos." 
+                           data-en="Platform for urban garden management, including blockchain forums and data visualization.">
+                            Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
+                        </p>
+                        <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
+                           
+                            <p style="margin: 0;" data-es="Rol desempeñado: Desarrollador Frontend - Administrador de bases de datos." 
+                               data-en="Role: Frontend - Backend Developer and Project Coordinator.">
+                                <strong>Rol desempeñado:</strong> Administrador de bases de datos.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag" style="background-color: brown; color: azure;">En Desarrollo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 <!-- CONTACTO -->
 <div class="contact-section hidden">
