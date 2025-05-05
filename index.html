@@ -833,7 +833,7 @@ section.mt-5 {
         </button>
         <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
             <li>
-                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
+                <a class="dropdown-item d-flex align-items-center py-2" href="cv.png" download="cv.png">
                     <i class="fas fa-download text-primary me-2"></i> <span id="cvDownload">Descargar</span>
                 </a>
             </li>
@@ -844,12 +844,23 @@ section.mt-5 {
   </div>
 
 <!-- INICIO / INTRODUCCIÓN -->
-<section id="inicio" class="intro-section text-center hidden">
+<!-- INICIO / INTRODUCCIÓN -->
+<section id="inicio" class="intro-section hidden">
     <div class="container">
-      <h1 id="introTitle" class="mb-3">¡Hola! Soy Juan Torres</h1>
-      <p id="introSubtitle" class="lead">
-        Software Developer | Apasionado por la tecnología y la innovación
-      </p>
+      <div class="row align-items-center">
+        <!-- Imagen cuadrada a la izquierda -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="yo.jpg" alt="Juan Torres" class="img-fluid" style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover;">
+        </div>
+        
+        <!-- Texto a la derecha -->
+        <div class="col-md-8 text-center text-md-start">
+          <h1 id="introTitle" class="mb-3">¡Hola! Soy Juan Torres</h1>
+          <p id="introSubtitle" class="lead">
+            Software Developer | Apasionado por la tecnología y la innovación
+          </p>
+        </div>
+      </div>
     </div>
   </section>
   
@@ -859,7 +870,6 @@ section.mt-5 {
 <section id="sobre-mi" class="mt-5 about-section">
     <h2 class="text-center"  id="aboutTitle">Sobre mí</h2>
     <div class="text-center">
-        <img src="profile.jpg" alt="Tu Imagen" class="img-fluid mb-3">
     </div>
     <p id="aboutText"> Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
     
@@ -1014,13 +1024,11 @@ section.mt-5 {
 </section>
 
 
-
-
 <!-- ESTRELLAS DE FONDO -->
 <div id="stars-container"></div>
 
 <section id="certificaciones" class="mt-5">
-    <h3 id="certificationsTitle" class="text-center mb-4">Certifications</h3>
+    <h3 id="certificationsTitle" class="text-center mb-4">Certificaciones</h3>
     <div class="container">
       <div id="carouselCertificaciones" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
@@ -1049,26 +1057,27 @@ section.mt-5 {
     </div>
   </section>
   
+
+
   <div class="projects-section" id="proyect">
     <div class="projects-container">
-      <h2 class="projects-title">Mis Proyectos</h2>
+      <h2 class="projects-title" id="projectsTitle">Mis Proyectos</h2>
       <hr style="border: 1px solid black; margin: 20px;">
   
       <div class="projects-carousel">
         <div class="projects-track" id="projectsTrack">
           
-          
-            <!-- Proyecto 1 -->
+          <!-- Proyecto 1 -->
           <div class="project-card">
             <img src="pro1.png" alt="Proyecto 1" class="project-image">
             <div class="project-info">
-              <h3 class="project-title">Calculadora Contable</h3>
-              <p class="project-description">
+              <h3 class="project-title" id="project1Title">Calculadora Contable</h3>
+              <p class="project-description" id="project1Description">
                 El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable
               </p>
   
               <div class="project-role" style="margin: 10px;padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;">
+                <p style="margin: 0;" id="project1Role">
                   <strong>Rol:</strong> Desarrollador Frontend y Backend.
                 </p>
               </div>
@@ -1076,11 +1085,11 @@ section.mt-5 {
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">CSS</span>
                 <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;">Finalizado</span>
+                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project1Status">Finalizado</span>
               </div>
               <div>
                 <div class="project-links"></div>
-                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank" class="project-link">Código</a>
+                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank" class="project-link" id="project1CodeLink">Código</a>
               </div>
             </div>
           </div>
@@ -1089,12 +1098,12 @@ section.mt-5 {
           <div class="project-card">
             <img src="pro2.png" alt="Proyecto 2" class="project-image">
             <div class="project-info">
-              <h3 class="project-title">Huerto en Mano</h3>
-              <p class="project-description">
+              <h3 class="project-title" id="project2Title">Huerto en Mano</h3>
+              <p class="project-description" id="project2Description">
                 Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
               </p>
               <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;">
+                <p style="margin: 0;" id="project2Role">
                   <strong>Rol:</strong> Administrador de bases de datos.
                 </p>
               </div>
@@ -1102,38 +1111,38 @@ section.mt-5 {
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">CSS</span>
                 <span class="tech-tag">Blockchain</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;">En Desarrollo</span>
+                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project2Status">En Desarrollo</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link">Código</a>
+                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" id="project2CodeLink">Código</a>
               </div>
             </div>
           </div>
-
+  
           <!-- Proyecto 3 -->
           <div class="project-card">
-            <img src="pro3.png" alt="Proyecto 2" class="project-image">
+            <img src="pro3.png" alt="Proyecto 3" class="project-image">
             <div class="project-info">
-              <h3 class="project-title">Sistema para una Farmacia</h3>
-              <p class="project-description">
-                Es un software integral que automatiza y controla las operaciones clav, garantizando eficiencia, precisiónc combina herramientas administrativas y clínicas.
+              <h3 class="project-title" id="project3Title">Sistema para una Farmacia</h3>
+              <p class="project-description" id="project3Description">
+                Es un software integral que automatiza y controla las operaciones clave, garantizando eficiencia y precisión; combina herramientas administrativas y clínicas.
               </p>
               <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;">
+                <p style="margin: 0;" id="project3Role">
                   <strong>Rol:</strong> Desarrollador Frontend y Backend.
                 </p>
               </div>
               <div class="project-tech">
                 <span class="tech-tag">C#</span>
-                <span class="tech-tag">SqlServer#</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;">Finalizado</span>
+                <span class="tech-tag">SqlServer</span>
+                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project3Status">Finalizado</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank" class="project-link">Código</a>
+                <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank" class="project-link" id="project3CodeLink">Código</a>
               </div>
             </div>
           </div>
-
+  
         </div>
       </div>
     </div>
@@ -1154,9 +1163,10 @@ section.mt-5 {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 
-<footer style="background-color: black; color: white; text-align: center; padding: 10px; width: 100%; position: relative; left: 0;">
+<footer id="footerText" style="background-color: black; color: white; text-align: center; padding: 10px; width: 100%; position: relative; left: 0;">
     © 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.
   </footer>
+  
   
   
 
@@ -1174,32 +1184,78 @@ section.mt-5 {
         contactTitle: "Contacto",
         navAbout: "Sobre mí",
         navHome: "Inicio",
+        projectsTitle: "Mis Proyectos",
+        footerText:"© 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.",
+
+
+project1Title:"Calculadora Contable",       
+project1Description:"El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable",
+project1Role:"Desarrollador Frontend y Backend.",
+project2Title:"Huerto en Mano",
+project2Description:"Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.",
+project2Role:"Administrador de bases de datos.",
+project3Title:"Sistema para una Farmacia",
+project3Description:"Es un software integral que automatiza y controla las operaciones clav, garantizando eficiencia, precisiónc combina herramientas administrativas y clínicas.",
+project3Role:"Desarrollador Frontend y Backend.",
+
+project1Status:"Finalizado",
+project1CodeLink:"codigo",
+
+project2Status:"Em desarollo",
+project2CodeLink:"codigo",
+
+project3Status:"Finalizado",
+project3CodeLink:"codigo",
+
+
+
+
         certificationsTitle: "Certificaciones",
-      
-        
         cardDotnetText: "Framework de desarrollo para apps modernas y escalables.",
         html5Description: "Lenguaje de marcado para estructurar páginas web",
         css35Description: "Estilos visuales para personalizar la apariencia web.",
         jsDescription: "Lenguaje de programación para interactividad web.",
         bootstrapDescription: "Framework CSS para diseño responsivo y moderno.",
-
-
         cardDotnetTitle: ".NET",
-      cardDotnetText: "Framework de desarrollo para apps modernas y escalables",
-       softSkillDisciplineTitle: "Disciplina",
-      softSkillDisciplineText: "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
-     softSkillCuriosityTitle: "Curiosidad",
-     softSkillCuriosityText: "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
-     softSkillPerseveranceTitle: "Perseverancia",
-     softSkillPerseveranceText: "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
-     softSkillCriticalTitle: "Autocrítica constructiva",
-     softSkillCriticalText: "Reconoces tus errores y trabajas en mejorarlos con actitud positiva.",
-       softSkillCommunicationTitle: "Comunicación",
-     softSkillCommunicationText: "Expresas tus ideas con claridad, siendo directo y organizado.",
-       
+        cardDotnetText: "Framework de desarrollo para apps modernas y escalables",
+        softSkillDisciplineTitle: "Disciplina",
+        softSkillDisciplineText: "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
+        softSkillCuriosityTitle: "Curiosidad",
+        softSkillCuriosityText: "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
+        softSkillPerseveranceTitle: "Perseverancia",
+        softSkillPerseveranceText: "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
+        softSkillCriticalTitle: "Autocrítica constructiva",
+        softSkillCriticalText: "Reconoces tus errores y trabajas en mejorarlos con actitud positiva.",
+        softSkillCommunicationTitle: "Comunicación",
+        softSkillCommunicationText: "Expresas tus ideas con claridad, siendo directo y organizado.",
         contactText: "Conectemos a través de mis perfiles profesionales:"
       },
       en: {
+
+
+         footerText:"© 2025 Juan Ramón Torres Guzmán. All rights reserved.",
+
+        project1Title:"Accounting Calculator",
+project1Description:"The accounting system is a comprehensive tool designed to facilitate financial and accounting management",
+project1Role:"Frontend and Backend Developer",
+project2Title:"Garden in Hand",
+project2Description:"Platform for urban garden management, including blockchain forums and data visualization",
+project2Role:"Database Administrator",
+project3Title:"System for a Pharmacy",
+project3Description:"It is a comprehensive software that automates and controls key operations, ensuring efficiency, accuracy, and combining administrative and clinical tools",
+project3Role:"Frontend and Backend Developer",
+
+project1Status:"Completed",
+project1CodeLink:"code",
+
+project2Status:"Em development",
+project2CodeLink:"code",
+
+project3Status:"Completed",
+project3CodeLink:"code",
+
+
+        projectsTitle: "My Projects",
         introTitle: "Hello! I'm Juan Torres",
         introSubtitle: "Software Developer | Passionate about technology and innovation",
         aboutTitle: "About me",
@@ -1213,12 +1269,12 @@ section.mt-5 {
         navHome: "Home",
         certificationsTitle: "Certifications",
         cardDotnetText: "Development framework for modern and scalable apps.",
-    cardDotnetTitle: ".NET",
-    cardDotnetText: "Development framework for modern and scalable apps",
-   html5Description: "Markup language for structuring web pages",
-   css3Description: "Visual styles for customizing web appearance.",
-   jsDescription: "Programming language for web interactivity.",
-  bootstrapDescription: "CSS framework for responsive and modern design.",
+     cardDotnetTitle: ".NET",
+     cardDotnetText: "Development framework for modern and scalable apps",
+     html5Description: "Markup language for structuring web pages",
+     css3Description: "Visual styles for customizing web appearance.",
+     jsDescription: "Programming language for web interactivity.",
+     bootstrapDescription: "CSS framework for responsive and modern design.",
 
 
 
