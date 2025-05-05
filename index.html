@@ -534,7 +534,7 @@ body .stars {
 
 /* General */
 body {
-    font-family: 'Roboto', sans-serif;
+    
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -679,6 +679,101 @@ body {
     }
 }
 
+
+/* habilidades blandas */
+
+/* General Styling for the Section */
+#softSkillsTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Padding for the Section to Avoid Touching the Screen's Edge */
+section.mt-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Card Container Styling */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.card i {
+    font-size: 2.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.card:hover i {
+    color: #007bff;
+}
+
+/* Title Styling */
+.card h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #333;
+}
+
+/* Text Styling */
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Card Specific Styling for Different Skills */
+#softSkillDisciplineTitle {
+    color: #007bff;
+}
+
+#softSkillCuriosityTitle {
+    color: #28a745;
+}
+
+#softSkillPerseveranceTitle {
+    color: #dc3545;
+}
+
+#softSkillSelfCriticismTitle {
+    color: #ffc107;
+}
+
+#softSkillCommunicationTitle {
+    color: #17a2b8;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Ensure there's padding on smaller screens too */
+    section.mt-5 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Adding Custom Margins Between Cards */
+.col-md-4 {
+    margin-bottom: 2rem;
+}
+
 </style>
 
 
@@ -709,15 +804,22 @@ body {
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a id="navAbout" class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    <a id="navInicio" class="nav-link active" href="#inicio">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a id="navHome" class="nav-link active" href="#inicio">Inicio</a>
+                    <a id="navSobreMi" class="nav-link active" href="#sobre-mi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a id="navCertificaciones" class="nav-link active" href="#certificaciones">Certificaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a id="navProyectos" class="nav-link active" href="#proyect">Proyectos</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 <div style="position: fixed; top: 80px; right: 20px; z-index: 1050;">
     <select id="languageSelector" class="form-select form-select-sm shadow rounded-pill">
@@ -769,6 +871,7 @@ body {
 
 <section id="habilidades" class="mt-5">
     <h3 class="text-center hidden" id="devSkillsTitle">Habilidades de Programación</h3>
+    <br>
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
   
@@ -853,7 +956,7 @@ body {
     <h3 class="text-center hidden" id="softSkillsTitle">Habilidades Blandas</h3>
     <div class="row">
         <!-- Disciplina -->
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="card border-0 shadow rounded-4 text-center p-3">
                 <div class="mb-2">
                     <i class="fas fa-clock fa-lg text-primary"></i>
@@ -864,7 +967,7 @@ body {
         </div>
 
         <!-- Curiosidad -->
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="card border-0 shadow rounded-4 text-center p-3">
                 <div class="mb-2">
                     <i class="fas fa-search fa-lg text-success"></i>
@@ -875,7 +978,7 @@ body {
         </div>
 
         <!-- Perseverancia -->
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="card border-0 shadow rounded-4 text-center p-3">
                 <div class="mb-2">
                     <i class="fas fa-mountain fa-lg text-danger"></i>
@@ -886,7 +989,7 @@ body {
         </div>
 
         <!-- Autocrítica -->
-        <div class="col-md-6">
+        <div class="col-md-4 mb-4">
             <div class="card border-0 shadow rounded-4 text-center p-3">
                 <div class="mb-2">
                     <i class="fas fa-pencil-alt fa-lg text-warning"></i>
@@ -895,20 +998,21 @@ body {
                 <p class="small" id="softSkillSelfCriticismText">Capacidad para reconocer tus puntos débiles y mejorar sobre ellos.</p>
             </div>
         </div>
+        
 
         <!-- Comunicación -->
-        <div class="col-md-6">
+        <div class="col-md-4 mb-4">
             <div class="card border-0 shadow rounded-4 text-center p-3">
                 <div class="mb-2">
                     <i class="fas fa-comments fa-lg text-info"></i>
                 </div>
                 <h5 id="softSkillCommunicationTitle">Comunicación</h5>
-                <p class="small" id="softSkillCommunicationText">Capacidad para transmitir ideas de manera clara y eficaz.</p>
+                <p class="small" id="softSkillCommunicationText">Capacidad para transmitir ideas, pensamientos y cuestionamientos de manera clara y eficaz.</p>
             </div>
         </div>
-
     </div>
 </section>
+
 
 
 
@@ -1070,8 +1174,9 @@ body {
         contactTitle: "Contacto",
         navAbout: "Sobre mí",
         navHome: "Inicio",
-
         certificationsTitle: "Certificaciones",
+      
+        
         cardDotnetText: "Framework de desarrollo para apps modernas y escalables.",
         html5Description: "Lenguaje de marcado para estructurar páginas web",
         css35Description: "Estilos visuales para personalizar la apariencia web.",
@@ -1106,9 +1211,8 @@ body {
         contactTitle: "Contact",
         navAbout: "About me",
         navHome: "Home",
-        certificationsTitle: "Certifications", 
+        certificationsTitle: "Certifications",
         cardDotnetText: "Development framework for modern and scalable apps.",
-      
     cardDotnetTitle: ".NET",
     cardDotnetText: "Development framework for modern and scalable apps",
    html5Description: "Markup language for structuring web pages",
