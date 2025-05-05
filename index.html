@@ -722,8 +722,23 @@ body {
 <div style="position: fixed; top: 80px; right: 20px; z-index: 1050;">
     <select id="languageSelector" class="form-select form-select-sm shadow rounded-pill">
       <option value="es"> Español</option>
-      <option value="en">🌐 English</option>
+      <option value="en"> English</option>
     </select>
+
+    <div class="dropdown mt-3 text-center">
+        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span id="cvTitle">Mi cv</span>
+        </button>
+        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
+            <li>
+                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
+                    <i class="fas fa-download text-primary me-2"></i> <span id="cvDownload">Descargar</span>
+                </a>
+            </li>
+           
+        </ul>
+    </div>
+
   </div>
 
 <!-- INICIO / INTRODUCCIÓN -->
@@ -747,19 +762,7 @@ body {
     <p id="aboutText"> Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
     
     <!-- Botón CV -->
-    <div class="dropdown mt-3 text-center">
-        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="cvTitle">📄 Mi CV</span>
-        </button>
-        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
-            <li>
-                <a class="dropdown-item d-flex align-items-center py-2" href="cv.pdf" download="cv.pdf">
-                    <i class="fas fa-download text-primary me-2"></i> <span id="cvDownload">Descargar</span>
-                </a>
-            </li>
-           
-        </ul>
-    </div>
+    
 </section>
 
   
@@ -944,75 +947,67 @@ body {
   
   <div class="projects-section" id="proyect">
     <div class="projects-container">
-        <h2 class="projects-title" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
-        <hr style="border: 1px solid black; margin: 20px;">
-
-        <div class="projects-carousel">
-     
-            
-            <div class="projects-track" id="projectsTrack">
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <img src="/recursos/inicio.png" alt="Proyecto 1" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title" data-es="Legal Connect" data-en="Legal Connect">Calculadora Contable</h3>
-                        <p class="project-description" data-es="Sistema integral para la gestión de casos legales con funcionalidades avanzadas." 
-                           data-en="Comprehensive system for legal case management with advanced features.">
-                           El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable
-                        </p>
-
-                        <div class="project-role" style="margin: 10px;padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                           
-                            <p style="margin: 0;" data-es="Rol desempeñado: Desarrollador Frontend - Backend y Coordinador de Proyecto." 
-                               data-en="Role: Frontend - Backend Developer and Project Coordinator.">
-                                <strong>Rol desempeñado:</strong> Desarrollador Frontend y Backend.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">CSS</span>
-                           
-                        </div>
-                        <div class="https://github.com/JuanRamonTG/AppCalculadoraa" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <img src="/recursos/huerto.png" alt="Proyecto 2" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title" data-es="Huerto en Mano" data-en="Huerto en Mano">Huerto en Mano</h3>
-                        <p class="project-description" data-es="Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos." 
-                           data-en="Platform for urban garden management, including blockchain forums and data visualization.">
-                            Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
-                        </p>
-                        <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                           
-                            <p style="margin: 0;" data-es="Rol desempeñado: Desarrollador Frontend - Administrador de bases de datos." 
-                               data-en="Role: Frontend - Backend Developer and Project Coordinator.">
-                                <strong>Rol desempeñado:</strong> Administrador de bases de datos.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Blockchain</span>
-                            <span class="tech-tag" style="background-color: brown; color: azure;">En Desarrollo</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                    </div>
-                </div>
+      <h2 class="projects-title">Mis Proyectos</h2>
+      <hr style="border: 1px solid black; margin: 20px;">
+  
+      <div class="projects-carousel">
+        <div class="projects-track" id="projectsTrack">
+          
+          
+            <!-- Proyecto 1 -->
+          <div class="project-card">
+            <img src="pro1.png" alt="Proyecto 1" class="project-image">
+            <div class="project-info">
+              <h3 class="project-title">Calculadora Contable</h3>
+              <p class="project-description">
+                El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable
+              </p>
+  
+              <div class="project-role" style="margin: 10px;padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
+                <p style="margin: 0;">
+                  <strong>Rol:</strong> Desarrollador Frontend y Backend.
+                </p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div>
+                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank" class="project-link">Código</a>
+              </div>
             </div>
+          </div>
+  
+          <!-- Proyecto 2 -->
+          <div class="project-card">
+            <img src="pro2.png" alt="Proyecto 2" class="project-image">
+            <div class="project-info">
+              <h3 class="project-title">Huerto en Mano</h3>
+              <p class="project-description">
+                Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
+              </p>
+              <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
+                <p style="margin: 0;">
+                  <strong>Rol:</strong> Administrador de bases de datos.
+                </p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Blockchain</span>
+                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;">En Desarrollo</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link">Código</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  
     
 
 <!-- CONTACTO -->
