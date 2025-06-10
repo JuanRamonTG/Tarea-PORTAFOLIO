@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
+    
+    
+    
+    
+    
+    
     <style>
     
     
@@ -1060,87 +1069,124 @@ section.mt-5 {
   </section>
   
 
+  <section class="mt-5">
+    <h3 class="text-center" id="techInterestsTitle">Mis Intereses en la Tecnología</h3>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-3">
+                <h5 class="text-primary"><i class="fas fa-robot"></i> Categoría: Inteligencia Artificial</h5>
+                <p class="small">Fascinado por el aprendizaje automático y cómo las IA están transformando el mundo tecnológico. Me intriga su capacidad para resolver problemas complejos y automatizar tareas, y estoy constantemente buscando aprender más sobre sus aplicaciones y desarrollo.</p>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-3">
+                <h5 class="text-success"><i class="fas fa-code"></i> Categoría: Desarrollo Web Fullstack</h5>
+                <p class="small">Me apasiona construir soluciones web completas, desde la interfaz de usuario con un diseño intuitivo hasta la lógica del servidor y la gestión de bases de datos. Disfruto el proceso de ver una idea cobrar vida en la web.</p>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-3">
+                <h5 class="text-danger"><i class="fas fa-shield-alt"></i> Categoría: Ciberseguridad</h5>
+                <p class="small">El mundo de la ciberseguridad me atrae por su constante evolución y la importancia de proteger la información. Me interesa entender las vulnerabilidades y aprender a implementar medidas de seguridad robustas para salvaguardar sistemas y datos.</p>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-3">
+                <h5 class="text-warning"><i class="fas fa-vr-cardboard"></i> Categoría: Realidad Virtual/Aumentada</h5>
+                <p class="small">Estoy entusiasmado con el potencial de la realidad virtual y aumentada para crear experiencias inmersivas y transformar industrias. Me atrae la idea de desarrollar aplicaciones que fusionen el mundo digital con el físico de maneras innovadoras.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
   <div class="projects-section" id="proyect">
     <div class="projects-container">
       <h2 class="projects-title" id="projectsTitle">Mis Proyectos</h2>
-      <hr style="border: 1px solid black; margin: 20px;">
+      <hr class="section-divider">
   
       <div class="projects-carousel">
         <div class="projects-track" id="projectsTrack">
-          
-          <!-- Proyecto 1 -->
+  
           <div class="project-card">
-            <img src="pro1.png" alt="Proyecto 1" class="project-image">
+            <div class="project-image-container">
+              <img src="pro1.png" alt="Proyecto 1" class="project-image">
+            </div>
             <div class="project-info">
               <h3 class="project-title" id="project1Title">Calculadora Contable</h3>
               <p class="project-description" id="project1Description">
-                El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable
+                El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable.
               </p>
-  
-              <div class="project-role" style="margin: 10px;padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;" id="project1Role">
-                  <strong>Rol:</strong> Desarrollador Frontend y Backend.
-                </p>
+              <div class="project-meta">
+                <div class="project-role">
+                  <p id="project1Role">
+                    <strong>Rol:</strong> Desarrollador Frontend y Backend.
+                  </p>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag status-tag status-finished" id="project1Status">Finalizado</span>
+                </div>
               </div>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project1Status">Finalizado</span>
-              </div>
-              <div>
-                <div class="project-links"></div>
-                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank" class="project-link" id="project1CodeLink">Código</a>
+              <div class="project-links">
+                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank" class="project-link" id="project1CodeLink">Ver Proyecto</a>
               </div>
             </div>
           </div>
   
-          <!-- Proyecto 2 -->
           <div class="project-card">
-            <img src="pro2.png" alt="Proyecto 2" class="project-image">
+            <div class="project-image-container">
+              <img src="pro2.png" alt="Proyecto 2" class="project-image">
+            </div>
             <div class="project-info">
               <h3 class="project-title" id="project2Title">Huerto en Mano</h3>
               <p class="project-description" id="project2Description">
                 Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
               </p>
-              <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;" id="project2Role">
-                  <strong>Rol:</strong> Administrador de bases de datos.
-                </p>
-              </div>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">Blockchain</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project2Status">En Desarrollo</span>
+              <div class="project-meta">
+                <div class="project-role">
+                  <p id="project2Role">
+                    <strong>Rol:</strong> Administrador de bases de datos.
+                  </p>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">Blockchain</span>
+                  <span class="tech-tag status-tag status-development" id="project2Status">En Desarrollo</span>
+                </div>
               </div>
               <div class="project-links">
-                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" id="project2CodeLink">Código</a>
+                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" id="project2CodeLink">Ver Proyecto</a>
               </div>
             </div>
           </div>
   
-          <!-- Proyecto 3 -->
           <div class="project-card">
-            <img src="pro3.png" alt="Proyecto 3" class="project-image">
+            <div class="project-image-container">
+              <img src="pro3.png" alt="Proyecto 3" class="project-image">
+            </div>
             <div class="project-info">
               <h3 class="project-title" id="project3Title">Sistema para una Farmacia</h3>
               <p class="project-description" id="project3Description">
                 Es un software integral que automatiza y controla las operaciones clave, garantizando eficiencia y precisión; combina herramientas administrativas y clínicas.
               </p>
-              <div class="project-role" style="margin: 10px; padding: 10px; border-left: 4px solid var(--accent-color); border-radius: 5px; margin-top: 10px; display: flex; align-items: center; background-color: var(--role-bg); color: var(--role-text);">
-                <p style="margin: 0;" id="project3Role">
-                  <strong>Rol:</strong> Desarrollador Frontend y Backend.
-                </p>
-              </div>
-              <div class="project-tech">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">SqlServer</span>
-                <span class="tech-tag" style="background-color: rgb(73, 64, 64); color: azure;" id="project3Status">Finalizado</span>
+              <div class="project-meta">
+                <div class="project-role">
+                  <p id="project3Role">
+                    <strong>Rol:</strong> Desarrollador Frontend y Backend.
+                  </p>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">SqlServer</span>
+                  <span class="tech-tag status-tag status-finished" id="project3Status">Finalizado</span>
+                </div>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank" class="project-link" id="project3CodeLink">Código</a>
+                <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank" class="project-link" id="project3CodeLink">Ver Proyecto</a>
               </div>
             </div>
           </div>
@@ -1149,7 +1195,327 @@ section.mt-5 {
       </div>
     </div>
   </div>
-  
+
+  <section class="mt-5">
+    <h3 class="text-center hidden" id="testimonialsTitle">Lo que dicen sobre mí</h3>
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-4 d-flex flex-column flex-md-row align-items-center">
+                <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4 text-center">
+                    <img src="https://via.placeholder.com/100" class="rounded-circle img-fluid" alt="Foto de Persona 1">
+                </div>
+                <div class="flex-grow-1 text-center text-md-start">
+                    <h5 class="mb-1">Dr. Alejandro Torres</h5>
+                    <p class="small text-muted mb-2">Profesor Titular de Informática</p>
+                    <p class="small fst-italic">"He tenido el placer de guiar a [Tu Nombre] en varios proyectos académicos y puedo decir que su **curiosidad** y **perseverancia** son excepcionales. Siempre busca ir más allá de lo básico y se esfuerza por comprender a fondo cada concepto."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-4 d-flex flex-column flex-md-row align-items-center">
+                <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4 text-center">
+                    <img src="https://via.placeholder.com/100" class="rounded-circle img-fluid" alt="Foto de Persona 2">
+                </div>
+                <div class="flex-grow-1 text-center text-md-start">
+                    <h5 class="mb-1">Ing. Sofía Ramírez</h5>
+                    <p class="small text-muted mb-2">Líder de Proyecto en TechSolutions S.A.</p>
+                    <p class="small fst-italic">"[Tu Nombre] se destaca por su **disciplina** y su capacidad de **autocrítica**. Es alguien que no solo cumple con las expectativas, sino que siempre busca mejorar y aprender de cada experiencia, lo que lo convierte en un valioso miembro de cualquier equipo."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="card border-0 shadow rounded-4 p-4 d-flex flex-column flex-md-row align-items-center">
+                <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4 text-center">
+                    <img src="https://via.placeholder.com/100" class="rounded-circle img-fluid" alt="Foto de Persona 3">
+                </div>
+                <div class="flex-grow-1 text-center text-md-start">
+                    <h5 class="mb-1">Lic. Carlos Mendoza</h5>
+                    <p class="small text-muted mb-2">Mentor de Desarrollo Profesional</p>
+                    <p class="small fst-italic">"La **comunicación** de [Tu Nombre] es excepcional. Tiene la habilidad de articular ideas complejas de manera clara y concisa, lo que facilita enormemente el trabajo en equipo y la resolución de problemas. Es un placer colaborar con él."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <style>
+
+  /* Variables CSS para fácil personalización (sin cambios) */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --accent-color: #007bff;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --role-bg: #e9ecef;
+  --role-text: #343a40;
+  --status-finished-bg: #28a745;
+  --status-finished-text: #ffffff;
+  --status-development-bg: #ffc107;
+  --status-development-text: #343a40;
+}
+
+/* Estilos Generales de la Sección */
+.projects-section {
+  padding: 40px 20px; /* Reducido el padding vertical */
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--primary-color);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5em; /* Ligeramente más pequeño */
+  margin-bottom: 15px; /* Margen reducido */
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px; /* Espaciado de letras ligeramente reducido */
+}
+
+.section-divider {
+  border: none;
+  border-top: 3px solid var(--accent-color);
+  width: 70px; /* Ancho más pequeño */
+  margin: 15px auto 30px auto; /* Márgenes reducidos */
+  border-radius: 2px;
+}
+
+/* Estilos del Carrusel de Proyectos */
+.projects-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 15px;
+}
+
+
+.projects-track {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  /* --- CAMBIOS AQUÍ --- */
+  justify-content: center; /* Centra los ítems horizontalmente cuando hay espacio */
+  flex-wrap: wrap; /* Permite que los ítems se envuelvan a la siguiente línea si no caben */
+}
+
+/* Estilos de la Tarjeta de Proyecto */
+.project-card {
+  flex: 0 0 320px; /* Ancho fijo para las tarjetas, un poco más estrecho */
+  background-color: var(--card-background);
+  border-radius: 10px; /* Radio de borde ligeramente más pequeño */
+  overflow: hidden;
+  box-shadow: 0 6px 12px var(--shadow-color); /* Sombra ligeramente más sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-6px); /* Elevación ligeramente menor */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Sombra de hover más sutil */
+}
+
+.project-image-container {
+  width: 100%;
+  height: 180px; /* Altura de la imagen reducida */
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.03); /* Efecto de zoom ligeramente menor */
+}
+
+.project-info {
+  padding: 18px; /* Padding reducido */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.6em; /* Tamaño de título ligeramente más pequeño */
+  color: var(--primary-color);
+  margin-bottom: 8px; /* Margen reducido */
+  font-weight: 600;
+  line-height: 1.2; /* Altura de línea más compacta */
+}
+
+.project-description {
+  font-size: 0.95em; /* Texto de descripción ligeramente más pequeño */
+  color: var(--secondary-color);
+  line-height: 1.5; /* Altura de línea más compacta */
+  margin-bottom: 15px; /* Margen reducido */
+  flex-grow: 1;
+  overflow: hidden; /* Oculta el exceso de texto */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas de texto */
+  -webkit-box-orient: vertical;
+}
+
+/* Estilos para el rol y las tecnologías */
+.project-meta {
+  margin-bottom: 15px; /* Margen reducido */
+}
+
+.project-role {
+  padding: 10px 12px; /* Padding reducido */
+  border-left: 4px solid var(--accent-color); /* Borde ligeramente más delgado */
+  border-radius: 6px; /* Radio de borde ligeramente más pequeño */
+  background-color: var(--role-bg);
+  color: var(--role-text);
+  font-size: 0.95em; /* Fuente ligeramente más pequeña */
+  font-weight: 500;
+  margin-bottom: 12px; /* Margen reducido */
+  display: flex;
+  align-items: center;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px; /* Espacio entre tags reducido */
+  margin-top: 12px; /* Margen reducido */
+}
+
+.tech-tag {
+  background-color: #f1f3f5;
+  color: var(--secondary-color);
+  padding: 6px 12px; /* Padding reducido */
+  border-radius: 18px; /* Radio de borde ligeramente más pequeño */
+  font-size: 0.85em; /* Fuente más pequeña */
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Estilos de estado (sin cambios) */
+.status-tag {
+  font-weight: 600;
+}
+
+.status-finished {
+  background-color: var(--status-finished-bg);
+  color: var(--status-finished-text);
+}
+
+.status-development {
+  background-color: var(--status-development-bg);
+  color: var(--status-development-text);
+}
+
+/* Estilos de enlaces */
+.project-links {
+  margin-top: auto;
+  padding-top: 15px; /* Padding reducido */
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+}
+
+.project-link {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px; /* Padding reducido */
+  border-radius: 6px; /* Radio de borde ligeramente más pequeño */
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1em; /* Fuente ligeramente más pequeña */
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px); /* Elevación de hover más sutil */
+}
+
+/* Media Queries para Responsividad (ajustadas para la compacidad) */
+@media (max-width: 992px) {
+  .projects-title {
+    font-size: 2em;
+  }
+
+  .project-card {
+    flex: 0 0 300px; /* Ancho de la tarjeta para pantallas medianas */
+  }
+
+  .project-image-container {
+    height: 160px; /* Altura de imagen reducida */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 30px 15px; /* Padding global reducido */
+  }
+
+  .projects-title {
+    font-size: 1.8em;
+  }
+
+  .projects-track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .project-card {
+    flex: 0 0 260px; /* Más estrecho para móviles */
+  }
+
+  .project-info {
+    padding: 15px; /* Padding de info reducido */
+  }
+
+  .project-title {
+    font-size: 1.4em;
+  }
+
+  .project-description {
+    font-size: 0.9em;
+    -webkit-line-clamp: 4; /* Permitir un poco más de texto en móviles si es necesario */
+  }
+
+  .project-link {
+    padding: 8px 18px; /* Padding reducido */
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.6em;
+  }
+
+  .project-card {
+    flex: 0 0 95%; /* Las tarjetas ocupan casi todo el ancho disponible */
+    margin: 0 auto;
+  }
+
+  .projects-track {
+    justify-content: flex-start;
+  }
+}
+</style>
     
 
 <!-- CONTACTO -->
@@ -1201,13 +1567,13 @@ section.mt-5 {
             project3Role:"Desarrollador Frontend y Backend.",
 
             project1Status:"Finalizado",
-            project1CodeLink:"codigo",
+            project1CodeLink:"Ver Proyecto",
 
             project2Status:"En desarrollo", // Corregí el typo "Em desarollo"
-            project2CodeLink:"codigo",
+            project2CodeLink:"Ver Proyecto",
 
             project3Status:"Finalizado",
-            project3CodeLink:"codigo",
+            project3CodeLink:"Ver Proyecto",
 
             certificationsTitle: "Certificaciones",
             cardDotnetText: "Framework de desarrollo para apps modernas y escalables.",
@@ -1217,15 +1583,15 @@ section.mt-5 {
             bootstrapDescription: "Framework CSS para diseño responsivo y moderno.",
             cardDotnetTitle: ".NET",
             softSkillDisciplineTitle: "Disciplina",
-            softSkillDisciplineText: "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
+            softSkillDisciplineText: "Tengo onstancia en el aprendizaje, el ejercicio y los proyectos personales.",
             softSkillCuriosityTitle: "Curiosidad",
             softSkillCuriosityText: "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
             softSkillPerseveranceTitle: "Perseverancia",
-            softSkillPerseveranceText: "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
+            softSkillPerseveranceText: "No me rindo fácilmente y retomo metas hasta lograr resultados concretos.",
             softSkillCriticalTitle: "Autocrítica constructiva",
-            softSkillCriticalText: "Reconoces tus errores y trabajas en mejorarlos con actitud positiva.",
+            softSkillCriticalText: "Reconosco mis errores y trabajas en mejorarlos con actitud positiva.",
             softSkillCommunicationTitle: "Comunicación",
-            softSkillCommunicationText: "Expresas tus ideas con claridad, siendo directo y organizado.",
+            softSkillCommunicationText: "Expreso mis ideas con claridad, siendo directo y organizado.",
             
             navInicio: "Inicio", // <--- CAMBIADO DE navHome a navInicio
             navSobreMi: "Sobre mí", // <--- CAMBIADO DE navAbout a navSobreMi
@@ -1255,13 +1621,13 @@ section.mt-5 {
             project3Role:"Frontend and Backend Developer",
 
             project1Status:"Completed",
-            project1CodeLink:"code",
+            project1CodeLink:"View Project",
 
             project2Status:"In development", // Corregí el typo "Em development"
-            project2CodeLink:"code",
+            project2CodeLink:"View Project",
 
             project3Status:"Completed",
-            project3CodeLink:"code",
+            project3CodeLink:"View Project",
 
             projectsTitle: "My Projects",
             introTitle: "Hello! I'm Juan Torres",
