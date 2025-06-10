@@ -794,56 +794,60 @@ section.mt-5 {
 </head>
 <body>
 
-<!-- Menú de navegación -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Juan Torres</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a id="navInicio" class="nav-link active" href="#inicio">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a id="navSobreMi" class="nav-link active" href="#sobre-mi">Sobre mí</a>
-                </li>
-                <li class="nav-item">
-                    <a id="navCertificaciones" class="nav-link active" href="#certificaciones">Certificaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a id="navProyectos" class="nav-link active" href="#proyect">Proyectos</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="log.png" alt="Logo" style="height: 40px;"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a id="navInicio" class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navSobreMi" class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navCertificaciones" class="nav-link" href="#certificaciones">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navProyectos" class="nav-link" href="#proyect">Proyectos</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="languageToggle" class="btn btn-outline-light btn-sm rounded-pill px-3" data-lang="es">ES/EN</button>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
-<div style="position: fixed; top: 80px; right: 20px; z-index: 1050;">
-    <select id="languageSelector" class="form-select form-select-sm shadow rounded-pill">
-      <option value="es"> Español</option>
-      <option value="en"> English</option>
-    </select>
+  
+  <script>
+    // Asegúrate de que este script se ejecute después de que el DOM esté completamente cargado.
+    // Si estás usando jQuery, podrías usar $(document).ready(function() { ... });
+    // Si no, puedes colocar este script al final del <body> o usar un evento DOMContentLoaded.
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageSelector = document.getElementById('languageSelector');
+  
+      // Detener la propagación del evento de clic en el selector de idioma
+      languageSelector.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+  
+      // Opcional: Detener la propagación del clic en el div padre del selector,
+      // para asegurar que los clics dentro de esa área no cierren el menú.
+      const languageSelectorParent = languageSelector.closest('.p-2');
+      if (languageSelectorParent) {
+        languageSelectorParent.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    });
+  </script>
 
-    <div class="dropdown mt-3 text-center">
-        <button class="btn btn-dark rounded-pill px-4 py-2 dropdown-toggle" type="button" id="cvDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <span id="cvTitle">Mi cv</span>
-        </button>
-        <ul class="dropdown-menu shadow border-0 rounded-3 small-menu" aria-labelledby="cvDropdown">
-            <li>
-                <a class="dropdown-item d-flex align-items-center py-2" href="cv.png" download="cv.png">
-                    <i class="fas fa-download text-primary me-2"></i> <span id="cvDownload">Descargar</span>
-                </a>
-            </li>
-           
-        </ul>
-    </div>
-
-  </div>
-
-<!-- INICIO / INTRODUCCIÓN -->
 <!-- INICIO / INTRODUCCIÓN -->
 <section id="inicio" class="intro-section hidden">
     <div class="container">
@@ -872,9 +876,7 @@ section.mt-5 {
     <div class="text-center">
     </div>
     <p id="aboutText"> Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.</p>
-    
-    <!-- Botón CV -->
-    
+        
 </section>
 
   
@@ -1170,138 +1172,182 @@ section.mt-5 {
   
   
 
-<script>
+  <script>
     const translations = {
-      es: {
-        introTitle: "¡Hola! Soy Juan Torres",
-        introSubtitle: "Software Developer | Apasionado por la tecnología y la innovación",
-        aboutTitle: "Sobre mí",
-        aboutText: "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.",
-        cvTitle: "📄 Mi cv",
-        cvDownload: "Descargar",
-        devSkillsTitle: "Habilidades de Programación",
-        softSkillsTitle: "Habilidades Blandas",
-        contactTitle: "Contacto",
-        navAbout: "Sobre mí",
-        navHome: "Inicio",
-        projectsTitle: "Mis Proyectos",
-        footerText:"© 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.",
+        es: {
+            // ... (tu objeto de traducciones en español)
+            introTitle: "¡Hola! Soy Juan Torres",
+            introSubtitle: "Software Developer | Apasionado por la tecnología y la innovación",
+            aboutTitle: "Sobre mí",
+            aboutText: "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes. Me encanta transformar ideas complejas en soluciones simples y efectivas, siempre buscando la innovación en cada línea de código. Además, me entusiasma aprender nuevas tendencias y colaborar en proyectos que dejen una huella significativa en el mundo digital.",
+            cvTitle: "📄 Mi cv",
+            cvDownload: "Descargar",
+            devSkillsTitle: "Habilidades de Programación",
+            softSkillsTitle: "Habilidades Blandas",
+            contactTitle: "Contacto",
+            navAbout: "Sobre mí",
+            navHome: "Inicio",
+            projectsTitle: "Mis Proyectos",
+            footerText:"© 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.",
+
+            project1Title:"Calculadora Contable",
+            project1Description:"El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable",
+            project1Role:"Desarrollador Frontend y Backend.",
+            project2Title:"Huerto en Mano",
+            project2Description:"Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.",
+            project2Role:"Administrador de bases de datos.",
+            project3Title:"Sistema para una Farmacia",
+            project3Description:"Es un software integral que automatiza y controla las operaciones clav, garantizando eficiencia, precisiónc combina herramientas administrativas y clínicas.",
+            project3Role:"Desarrollador Frontend y Backend.",
+
+            project1Status:"Finalizado",
+            project1CodeLink:"codigo",
+
+            project2Status:"En desarrollo", // Corregí el typo "Em desarollo"
+            project2CodeLink:"codigo",
+
+            project3Status:"Finalizado",
+            project3CodeLink:"codigo",
+
+            certificationsTitle: "Certificaciones",
+            cardDotnetText: "Framework de desarrollo para apps modernas y escalables.",
+            html5Description: "Lenguaje de marcado para estructurar páginas web",
+            css3Description: "Estilos visuales para personalizar la apariencia web.", // Asegúrate de que este ID corresponda a un elemento en tu HTML
+            jsDescription: "Lenguaje de programación para interactividad web.",
+            bootstrapDescription: "Framework CSS para diseño responsivo y moderno.",
+            cardDotnetTitle: ".NET",
+            softSkillDisciplineTitle: "Disciplina",
+            softSkillDisciplineText: "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
+            softSkillCuriosityTitle: "Curiosidad",
+            softSkillCuriosityText: "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
+            softSkillPerseveranceTitle: "Perseverancia",
+            softSkillPerseveranceText: "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
+            softSkillCriticalTitle: "Autocrítica constructiva",
+            softSkillCriticalText: "Reconoces tus errores y trabajas en mejorarlos con actitud positiva.",
+            softSkillCommunicationTitle: "Comunicación",
+            softSkillCommunicationText: "Expresas tus ideas con claridad, siendo directo y organizado.",
+            
+            navInicio: "Inicio", // <--- CAMBIADO DE navHome a navInicio
+            navSobreMi: "Sobre mí", // <--- CAMBIADO DE navAbout a navSobreMi
+            navCertificaciones: "Certificaciones", // Asegúrate de que este exista
+            navProyectos: "Proyectos",
 
 
-project1Title:"Calculadora Contable",       
-project1Description:"El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable",
-project1Role:"Desarrollador Frontend y Backend.",
-project2Title:"Huerto en Mano",
-project2Description:"Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.",
-project2Role:"Administrador de bases de datos.",
-project3Title:"Sistema para una Farmacia",
-project3Description:"Es un software integral que automatiza y controla las operaciones clav, garantizando eficiencia, precisiónc combina herramientas administrativas y clínicas.",
-project3Role:"Desarrollador Frontend y Backend.",
+            contactText: "Conectemos a través de mis perfiles profesionales:"
+        },
+        en: {
+            // ... (tu objeto de traducciones en inglés)
 
-project1Status:"Finalizado",
-project1CodeLink:"codigo",
+            navInicio: "Home", // <--- CAMBIADO DE navHome a navInicio
+            navSobreMi: "About me", // <--- CAMBIADO DE navAbout a navSobreMi
+            navCertificaciones: "Certifications", // Asegúrate de que este exista
+            navProyectos: "Projects",
 
-project2Status:"Em desarollo",
-project2CodeLink:"codigo",
+            footerText:"© 2025 Juan Ramón Torres Guzmán. All rights reserved.",
+            project1Title:"Accounting Calculator",
+            project1Description:"The accounting system is a comprehensive tool designed to facilitate financial and accounting management",
+            project1Role:"Frontend and Backend Developer",
+            project2Title:"Garden in Hand",
+            project2Description:"Platform for urban garden management, including blockchain forums and data visualization",
+            project2Role:"Database Administrator",
+            project3Title:"System for a Pharmacy",
+            project3Description:"It is a comprehensive software that automates and controls key operations, ensuring efficiency, accuracy, and combining administrative and clinical tools",
+            project3Role:"Frontend and Backend Developer",
 
-project3Status:"Finalizado",
-project3CodeLink:"codigo",
+            project1Status:"Completed",
+            project1CodeLink:"code",
 
+            project2Status:"In development", // Corregí el typo "Em development"
+            project2CodeLink:"code",
 
+            project3Status:"Completed",
+            project3CodeLink:"code",
 
+            projectsTitle: "My Projects",
+            introTitle: "Hello! I'm Juan Torres",
+            introSubtitle: "Software Developer | Passionate about technology and innovation",
+            aboutTitle: "About me",
+            aboutText: "Hi, I'm Juan Ramon, a proud Salvadoran with an overwhelming passion for creating digital experiences that merge creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools such as .NET Core, MySQL, HTML, CSS, and JavaScript. My focus is on creating intuitive and attractive interfaces that are not only functional but also visually stunning. I love transforming complex ideas into simple and effective solutions, always seeking innovation in every line of code. I'm also excited to learn new trends and collaborate on projects that leave a significant mark on the digital world.",
+            cvTitle: "📄 My cv",
+            cvDownload: "Download",
+            devSkillsTitle: "Programming Skills",
+            softSkillsTitle: "Soft Skills",
+            contactTitle: "Contact",
+            navAbout: "About me",
+            navHome: "Home",
+            certificationsTitle: "Certifications",
+            cardDotnetText: "Development framework for modern and scalable apps.",
+            cardDotnetTitle: ".NET",
+            html5Description: "Markup language for structuring web pages",
+            css3Description: "Visual styles for customizing web appearance.",
+            jsDescription: "Programming language for web interactivity.",
+            bootstrapDescription: "CSS framework for responsive and modern design.",
 
-        certificationsTitle: "Certificaciones",
-        cardDotnetText: "Framework de desarrollo para apps modernas y escalables.",
-        html5Description: "Lenguaje de marcado para estructurar páginas web",
-        css35Description: "Estilos visuales para personalizar la apariencia web.",
-        jsDescription: "Lenguaje de programación para interactividad web.",
-        bootstrapDescription: "Framework CSS para diseño responsivo y moderno.",
-        cardDotnetTitle: ".NET",
-        cardDotnetText: "Framework de desarrollo para apps modernas y escalables",
-        softSkillDisciplineTitle: "Disciplina",
-        softSkillDisciplineText: "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
-        softSkillCuriosityTitle: "Curiosidad",
-        softSkillCuriosityText: "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
-        softSkillPerseveranceTitle: "Perseverancia",
-        softSkillPerseveranceText: "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
-        softSkillCriticalTitle: "Autocrítica constructiva",
-        softSkillCriticalText: "Reconoces tus errores y trabajas en mejorarlos con actitud positiva.",
-        softSkillCommunicationTitle: "Comunicación",
-        softSkillCommunicationText: "Expresas tus ideas con claridad, siendo directo y organizado.",
-        contactText: "Conectemos a través de mis perfiles profesionales:"
-      },
-      en: {
+            softSkillDisciplineTitle: "Discipline",
+            softSkillDisciplineText: "Consistency in learning, exercise, and personal projects.",
+            softSkillCuriosityTitle: "Curiosity",
+            softSkillCuriosityText: "Natural interest in learning, exploring new ideas, and diving deep into the technical.",
+            softSkillPerseveranceTitle: "Perseverance",
+            softSkillPerseveranceText: "You don't give up easily and take on goals until you achieve concrete results.",
+            softSkillCriticalTitle: "Constructive Self-Criticism",
+            softSkillCriticalText: "You recognize your mistakes and work to improve them with a positive attitude.",
+            softSkillCommunicationTitle: "Communication",
+            softSkillCommunicationText: "You express your ideas clearly, being direct and organized.",
 
-
-         footerText:"© 2025 Juan Ramón Torres Guzmán. All rights reserved.",
-
-        project1Title:"Accounting Calculator",
-project1Description:"The accounting system is a comprehensive tool designed to facilitate financial and accounting management",
-project1Role:"Frontend and Backend Developer",
-project2Title:"Garden in Hand",
-project2Description:"Platform for urban garden management, including blockchain forums and data visualization",
-project2Role:"Database Administrator",
-project3Title:"System for a Pharmacy",
-project3Description:"It is a comprehensive software that automates and controls key operations, ensuring efficiency, accuracy, and combining administrative and clinical tools",
-project3Role:"Frontend and Backend Developer",
-
-project1Status:"Completed",
-project1CodeLink:"code",
-
-project2Status:"Em development",
-project2CodeLink:"code",
-
-project3Status:"Completed",
-project3CodeLink:"code",
-
-
-        projectsTitle: "My Projects",
-        introTitle: "Hello! I'm Juan Torres",
-        introSubtitle: "Software Developer | Passionate about technology and innovation",
-        aboutTitle: "About me",
-        aboutText: "Hi, I'm Juan Ramon, a proud Salvadoran with an overwhelming passion for creating digital experiences that merge creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools such as .NET Core, MySQL, HTML, CSS, and JavaScript. My focus is on creating intuitive and attractive interfaces that are not only functional but also visually stunning. I love transforming complex ideas into simple and effective solutions, always seeking innovation in every line of code. I'm also excited to learn new trends and collaborate on projects that leave a significant mark on the digital world.",
-        cvTitle: "📄 My cv",
-        cvDownload: "Download",
-        devSkillsTitle: "Programming Skills",
-        softSkillsTitle: "Soft Skills",
-        contactTitle: "Contact",
-        navAbout: "About me",
-        navHome: "Home",
-        certificationsTitle: "Certifications",
-        cardDotnetText: "Development framework for modern and scalable apps.",
-     cardDotnetTitle: ".NET",
-     cardDotnetText: "Development framework for modern and scalable apps",
-     html5Description: "Markup language for structuring web pages",
-     css3Description: "Visual styles for customizing web appearance.",
-     jsDescription: "Programming language for web interactivity.",
-     bootstrapDescription: "CSS framework for responsive and modern design.",
-
-
-
-
-    softSkillDisciplineTitle: "Discipline",
-    softSkillDisciplineText: "Consistency in learning, exercise, and personal projects.",
-    softSkillCuriosityTitle: "Curiosity",
-    softSkillCuriosityText: "Natural interest in learning, exploring new ideas, and diving deep into the technical.",
-    softSkillPerseveranceTitle: "Perseverance",
-    softSkillPerseveranceText: "You don't give up easily and take on goals until you achieve concrete results.",
-    softSkillCriticalTitle: "Constructive Self-Criticism",
-    softSkillCriticalText: "You recognize your mistakes and work to improve them with a positive attitude.",
-    softSkillCommunicationTitle: "Communication",
-    softSkillCommunicationText: "You express your ideas clearly, being direct and organized.",
-
-        contactText: "Let's connect through my professional profiles:"
-      }
+            contactText: "Let's connect through my professional profiles:"
+        }
     };
-  
-    document.getElementById("languageSelector").addEventListener("change", function () {
-      const lang = this.value;
-      for (const key in translations[lang]) {
-        const el = document.getElementById(key);
-        if (el) el.textContent = translations[lang][key];
-      }
+
+    // Función para aplicar las traducciones
+    function applyTranslations(lang) {
+        for (const key in translations[lang]) {
+            const el = document.getElementById(key);
+            if (el) {
+                // Si el elemento es un input o textarea, se traduce su placeholder o value
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    if (el.placeholder) {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.value = translations[lang][key];
+                    }
+                } else {
+                    // Para otros elementos, se traduce su textContent
+                    el.textContent = translations[lang][key];
+                }
+            } else {
+                console.warn(`Elemento con ID '${key}' no encontrado para traducción.`);
+            }
+        }
+        // Actualiza el texto del botón de idioma
+        const languageToggle = document.getElementById('languageToggle');
+        if (languageToggle) {
+            languageToggle.textContent = lang === 'es' ? 'ES/EN' : 'EN/ES';
+            languageToggle.setAttribute('data-lang', lang);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageToggle = document.getElementById('languageToggle');
+        // Obtener el idioma guardado, si existe, o usar 'es' por defecto
+        let currentLang = localStorage.getItem('lang') || 'es';
+
+        // Aplicar las traducciones iniciales basadas en el idioma guardado o por defecto
+        applyTranslations(currentLang);
+
+        if (languageToggle) {
+            languageToggle.addEventListener('click', function() {
+                // Alternar el idioma
+                currentLang = currentLang === 'es' ? 'en' : 'es';
+                
+                // Aplicar las nuevas traducciones
+                applyTranslations(currentLang);
+
+                // Guardar la preferencia de idioma en localStorage
+                localStorage.setItem('lang', currentLang);
+            });
+        }
     });
-  </script>
+</script>
   
   
   
