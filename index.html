@@ -18,6 +18,183 @@
     
     <style>
     
+/* Import Google Fonts (example) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap');
+
+/* --- Base Styles --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* --- Hero Section Grayscale Styles --- */
+.hero-section-grayscale {
+  min-height: 70vh; /* Reduced height */
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Light gray gradient background */
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0; /* Reduced padding */
+  display: flex;
+}
+
+/* Darker overlay for text readability on background */
+.hero-section-grayscale::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* Very subtle dark overlay for contrast */
+  z-index: 0;
+}
+
+.hero-section-grayscale .container {
+  z-index: 1;
+}
+
+.hero-section-grayscale h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem; /* Smaller title */
+  line-height: 1.1;
+  color: #333; /* Dark gray text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section-grayscale .highlight-text-grayscale {
+  color: #555; /* Medium gray accent for name */
+  font-weight: 900;
+}
+
+.hero-section-grayscale .lead {
+  font-size: 1.2rem; /* Slightly smaller lead text */
+  font-weight: 300;
+  color: #666;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Buttons Grayscale --- */
+.hero-section-grayscale .btn-primary-grayscale {
+  background-color: #333; /* Dark gray primary button */
+  border-color: #333;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px; /* Smaller padding */
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section-grayscale .btn-primary-grayscale:hover {
+  background-color: #555; /* Lighter gray on hover */
+  border-color: #555;
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section-grayscale .btn-outline-secondary-grayscale {
+  color: #555; /* Medium gray outline text */
+  border: 2px solid #555;
+  font-weight: 600;
+  padding: 10px 25px; /* Smaller padding */
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section-grayscale .btn-outline-secondary-grayscale:hover {
+  background-color: #555; /* Solid gray on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* New CV Download Button Style */
+.hero-section-grayscale .btn-download-cv {
+  background-color: #777; /* A distinct middle gray */
+  border-color: #777;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section-grayscale .btn-download-cv:hover {
+  background-color: #999;
+  border-color: #999;
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Profile Image Grayscale Wrapper (for the circle) --- */
+.hero-image-wrapper-grayscale {
+  width: 190px; /* Control the size of the circle container */
+  height: 190px;
+  border-radius: 100%;
+  overflow: hidden; /* This is crucial for clipping the image into a circle */
+  border: 4px solid #777; /* Medium gray border */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  position: relative; /* Needed for absolute positioning of the image */
+}
+
+.hero-image-wrapper-grayscale:hover {
+  transform: scale(1.03) rotate(2deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Profile Image (The actual image inside the circle) --- */
+.hero-profile-image-grayscale-fixed {
+  width: 90%;
+  height: 90%;
+  object-fit: cover; /* This makes the image cover the entire circular area */
+  position: absolute; /* Ensures it fills the wrapper */
+  top: 0;
+  left: 0;
+  display: block;
+  /* Removed filter: grayscale() here */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+  .hero-section-grayscale {
+    min-height: auto; /* Auto height on mobile */
+    padding: 40px 0;
+  }
+  .hero-section-grayscale h1 {
+    font-size: 2.2rem;
+  }
+  .hero-section-grayscale .lead {
+    font-size: 1rem;
+  }
+  .hero-image-wrapper-grayscale {
+    width: 160px; /* Even smaller image on mobile */
+    height: 160px;
+    margin-bottom: 25px;
+  }
+  .hero-section-grayscale .d-flex {
+    flex-direction: column;
+    gap: 10px; /* Smaller gap for stacked buttons */
+  }
+  .hero-section-grayscale .btn-primary-grayscale,
+  .hero-section-grayscale .btn-outline-secondary-grayscale,
+  .hero-section-grayscale .btn-download-cv { /* Apply to new button as well */
+    width: 100%;
+    padding: 8px 20px; /* Smaller button padding on mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
 /* Estilos generales */
 body {
@@ -858,24 +1035,36 @@ section.mt-5 {
   </script>
 
 <!-- INICIO / INTRODUCCIÓN -->
-<section id="inicio" class="intro-section hidden">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Imagen cuadrada a la izquierda -->
-        <div class="col-md-4 text-center mb-4 mb-md-0">
-          <img src="yo.jpg" alt="Juan Torres" class="img-fluid" style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover;">
+<section id="hero" class="hero-section-grayscale text-white d-flex align-items-center">
+    <div class="container position-relative z-index-1">
+      <div class="row align-items-center justify-content-center">
+  
+        <div class="col-lg-3 col-md-4 order-md-2 order-1 d-flex justify-content-center mb-4 mb-md-0 animate__animated animate__fadeInRight animate__delay-0-5s">
+          <div class="hero-image-wrapper-grayscale">
+            <img src="yo.jpg" alt="Juan Torres - Software Developer" class="img-fluid hero-profile-image-grayscale-fixed">
+          </div>
         </div>
-        
-        <!-- Texto a la derecha -->
-        <div class="col-md-8 text-center text-md-start">
-          <h1 id="introTitle" class="mb-3">¡Hola! Soy Juan Torres</h1>
-          <p id="introSubtitle" class="lead">
-            Software Developer | Apasionado por la tecnología y la innovación
+  
+        <div class="col-lg-7 col-md-8 order-md-1 order-2 text-center text-md-start animate__animated animate__fadeInLeft">
+          <h1 class="display-5 fw-bold mb-2">
+            Hola, soy <span class="highlight-text-grayscale">Juan Torres</span>
+          </h1>
+          <p class="lead mb-3">
+            Un Software Developer apasionado por la innovación y la eficiencia.
           </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2 mt-3">
+            <a href="cv.png" download class="btn btn-download-cv btn-lg rounded-pill shadow-sm">
+              Descargar CV <i class="bi bi-download"></i>
+            </a>
+          </div>
         </div>
+  
       </div>
     </div>
   </section>
+
+
+
   
 
 
@@ -1199,50 +1388,145 @@ section.mt-5 {
 
 
   <section class="container my-5">
-    <hr> <h3 class="text-center mb-4">Lo que dicen sobre mí</h3>
-     <div class="row justify-content-center">
+    <h3 class="text-center mb-4">Lo que dicen sobre mí</h3>
+    <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 mb-4">
-            <div class="d-flex align-items-center p-3">
-                <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto de Persona 1">
-                <div>
-                    <h5 class="mb-0">Dr. Alejandro Torres</h5>
-                    <p class="text-muted small">Profesor Titular de Informática</p>
-                    <p class="fst-italic">"Su **curiosidad** y **perseverancia** son excepcionales. Siempre busca ir más allá de lo básico y se esfuerza por comprender a fondo cada concepto."</p>
+            <div class="testimonial-item p-4 rounded shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="juan.png" class="rounded-circle me-3" alt="Foto de Persona 1" style="width: 60px; height: 60px;">
+                    <div>
+                        <h6 class="mb-0 fw-bold">Juan Carlos</h6>
+                        <p class="text-muted small mb-0">Programador Front-end</p>
+                    </div>
                 </div>
+                <p class="fst-italic mb-0">“Su curiosidad y <strong>perseverancia</strong> son excepcionales. Siempre busca ir más allá de lo básico y se esfuerza por comprender a fondo cada concepto.”</p>
             </div>
         </div>
-        <hr> <div class="col-md-8 col-lg-6 mb-4">
-            <div class="d-flex align-items-center p-3">
-                <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto de Persona 2">
-                <div>
-                    <h5 class="mb-0">Ing. Sofía Ramírez</h5>
-                    <p class="text-muted small">Líder de Proyecto en TechSolutions S.A.</p>
-                    <p class="fst-italic">"Se destaca por su **disciplina** y su capacidad de **autocrítica**. Siempre busca mejorar y aprender de cada experiencia."</p>
+
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="testimonial-item p-4 rounded shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="salva.png" class="rounded-circle me-3" alt="Foto de Persona 2" style="width: 60px; height: 60px;">
+                    <div>
+                        <h6 class="mb-0 fw-bold">Salvador Andrade</h6>
+                        <p class="text-muted small mb-0">Programador Back-end</p>
+                    </div>
                 </div>
+                <p class="fst-italic mb-0">“Se destaca por su <strong>disciplina</strong> y su capacidad de autocrítica. Siempre busca mejorar y aprender de cada experiencia.”</p>
             </div>
         </div>
-        <hr> <div class="col-md-8 col-lg-6 mb-4">
-            <div class="d-flex align-items-center p-3">
-                <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto de Persona 3">
-                <div>
-                    <h5 class="mb-0">Lic. Carlos Mendoza</h5>
-                    <p class="text-muted small">Mentor de Desarrollo Profesional</p>
-                    <p class="fst-italic">"La **comunicación** es excepcional. Tiene la habilidad de articular ideas complejas de manera clara y concisa."</p>
+
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="testimonial-item p-4 rounded shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="maria.png" class="rounded-circle me-3" alt="Foto de Persona 3" style="width: 60px; height: 60px;">
+                    <div>
+                        <h6 class="mb-0 fw-bold">Marìa Salgado</h6>
+                        <p class="text-muted small mb-0">Diseñadora UI/UX</p>
+                    </div>
                 </div>
+                <p class="fst-italic mb-0">“La <strong>comunicación</strong> es excepcional. Tiene la habilidad de articular ideas complejas de manera clara y concisa.”</p>
             </div>
         </div>
-        <hr> <div class="col-md-8 col-lg-6 mb-4">
-            <div class="d-flex align-items-center p-3">
-                <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto de Persona 3">
-                <div>
-                    <h5 class="mb-0">Lic. Carlos Mendoza</h5>
-                    <p class="text-muted small">Mentor de Desarrollo Profesional</p>
-                    <p class="fst-italic">"La **comunicación** es excepcional. Tiene la habilidad de articular ideas complejas de manera clara y concisa."</p>
+
+        <div class="col-md-8 col-lg-6 mb-4">
+            <div class="testimonial-item p-4 rounded shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="juli.png" class="rounded-circle me-3" alt="Foto de Persona 4" style="width: 60px; height: 60px;">
+                    <div>
+                        <h6 class="mb-0 fw-bold">Julissa Sosa</h6>
+                        <p class="text-muted small mb-0">Analista de pruebas</p>
+                    </div>
                 </div>
+                <p class="fst-italic mb-0">“Es un <strong>trabajador innato</strong> y le gusta mejorar y enfrentarse a retos constantemente.”</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>   
+
+/* Sección Lo que dicen sobre mí */
+.testimonial-item {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados para un look suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos hover */
+    margin-bottom: 25px; /* Espacio entre los testimonios */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.testimonial-item img {
+    border: 2px solid #007bff; /* Borde de color de acento alrededor de la foto */
+    padding: 2px; /* Pequeño relleno para el borde */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para la imagen */
+}
+
+.testimonial-item h6 {
+    color: #333333; /* Color oscuro para el nombre */
+    font-size: 1.15rem; /* Un poco más grande para el nombre */
+}
+
+.testimonial-item .text-muted {
+    color: #6c757d !important; /* Asegura que el color gris sea consistente */
+    font-size: 0.9rem; /* Tamaño más pequeño para la profesión */
+}
+
+.testimonial-item .fst-italic {
+    color: #555555; /* Color para el texto del testimonio */
+    font-size: 1rem;
+    line-height: 1.6; /* Espaciado de línea para mejor legibilidad */
+    position: relative; /* Para las comillas estilizadas */
+    padding-left: 25px; /* Espacio para el icono de comilla */
+}
+
+.testimonial-item .fst-italic::before {
+    content: "“"; /* Comilla de apertura */
+    font-family: serif; /* O una fuente de icono si usas Font Awesome */
+    font-size: 3em; /* Tamaño grande de la comilla */
+    color: #007bff; /* Color de acento para la comilla */
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    opacity: 0.2; /* Comilla más tenue */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .testimonial-item {
+        padding: 20px; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .testimonial-item img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .testimonial-item h6 {
+        font-size: 1rem;
+    }
+
+    .testimonial-item .text-muted {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-item .fst-italic {
+        font-size: 0.95rem;
+        padding-left: 20px;
+    }
+
+    .testimonial-item .fst-italic::before {
+        font-size: 2.5em;
+    }
+}
+
+
+</style>
 
 
   <style>
