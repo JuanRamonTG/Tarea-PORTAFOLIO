@@ -8,184 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
-    
-    
-    
-    
-    
-    
-    
-    <style>
-    
-/* Import Google Fonts (example) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap');
-
-/* --- Base Styles --- */
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-}
-
-/* --- Hero Section Grayscale Styles --- */
-.hero-section-grayscale {
-  min-height: 70vh; /* Reduced height */
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Light gray gradient background */
-  position: relative;
-  overflow: hidden;
-  padding: 60px 0; /* Reduced padding */
-  display: flex;
-}
-
-/* Darker overlay for text readability on background */
-.hero-section-grayscale::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.1); /* Very subtle dark overlay for contrast */
-  z-index: 0;
-}
-
-.hero-section-grayscale .container {
-  z-index: 1;
-}
-
-.hero-section-grayscale h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem; /* Smaller title */
-  line-height: 1.1;
-  color: #333; /* Dark gray text */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.hero-section-grayscale .highlight-text-grayscale {
-  color: #555; /* Medium gray accent for name */
-  font-weight: 900;
-}
-
-.hero-section-grayscale .lead {
-  font-size: 1.2rem; /* Slightly smaller lead text */
-  font-weight: 300;
-  color: #666;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Buttons Grayscale --- */
-.hero-section-grayscale .btn-primary-grayscale {
-  background-color: #333; /* Dark gray primary button */
-  border-color: #333;
-  color: #fff;
-  font-weight: 600;
-  padding: 10px 25px; /* Smaller padding */
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-section-grayscale .btn-primary-grayscale:hover {
-  background-color: #555; /* Lighter gray on hover */
-  border-color: #555;
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.hero-section-grayscale .btn-outline-secondary-grayscale {
-  color: #555; /* Medium gray outline text */
-  border: 2px solid #555;
-  font-weight: 600;
-  padding: 10px 25px; /* Smaller padding */
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-section-grayscale .btn-outline-secondary-grayscale:hover {
-  background-color: #555; /* Solid gray on hover */
-  color: #fff; /* White text on hover */
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* New CV Download Button Style */
-.hero-section-grayscale .btn-download-cv {
-  background-color: #777; /* A distinct middle gray */
-  border-color: #777;
-  color: #fff;
-  font-weight: 600;
-  padding: 10px 25px;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-section-grayscale .btn-download-cv:hover {
-  background-color: #999;
-  border-color: #999;
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* --- Profile Image Grayscale Wrapper (for the circle) --- */
-.hero-image-wrapper-grayscale {
-  width: 190px; /* Control the size of the circle container */
-  height: 190px;
-  border-radius: 100%;
-  overflow: hidden; /* This is crucial for clipping the image into a circle */
-  border: 4px solid #777; /* Medium gray border */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  flex-shrink: 0;
-  position: relative; /* Needed for absolute positioning of the image */
-}
-
-.hero-image-wrapper-grayscale:hover {
-  transform: scale(1.03) rotate(2deg);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* --- Profile Image (The actual image inside the circle) --- */
-.hero-profile-image-grayscale-fixed {
-  width: 90%;
-  height: 90%;
-  object-fit: cover; /* This makes the image cover the entire circular area */
-  position: absolute; /* Ensures it fills the wrapper */
-  top: 0;
-  left: 0;
-  display: block;
-  /* Removed filter: grayscale() here */
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 767.98px) {
-  .hero-section-grayscale {
-    min-height: auto; /* Auto height on mobile */
-    padding: 40px 0;
-  }
-  .hero-section-grayscale h1 {
-    font-size: 2.2rem;
-  }
-  .hero-section-grayscale .lead {
-    font-size: 1rem;
-  }
-  .hero-image-wrapper-grayscale {
-    width: 160px; /* Even smaller image on mobile */
-    height: 160px;
-    margin-bottom: 25px;
-  }
-  .hero-section-grayscale .d-flex {
-    flex-direction: column;
-    gap: 10px; /* Smaller gap for stacked buttons */
-  }
-  .hero-section-grayscale .btn-primary-grayscale,
-  .hero-section-grayscale .btn-outline-secondary-grayscale,
-  .hero-section-grayscale .btn-download-cv { /* Apply to new button as well */
-    width: 100%;
-    padding: 8px 20px; /* Smaller button padding on mobile */
-  }
-}
-
-
-
-
-
+<head>
 
 
 
@@ -968,7 +793,7 @@ section.mt-5 {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Torres</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -983,7 +808,7 @@ section.mt-5 {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <img src="log.png" alt="Logo" style="height: 40px;"> </a>
+                <img src="assets/images/log.png" alt="Logo" style="height: 40px;"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -1041,7 +866,7 @@ section.mt-5 {
   
         <div class="col-lg-3 col-md-4 order-md-2 order-1 d-flex justify-content-center mb-4 mb-md-0 animate__animated animate__fadeInRight animate__delay-0-5s">
           <div class="hero-image-wrapper-grayscale">
-            <img src="yo.jpg" alt="Juan Torres - Software Developer" class="img-fluid hero-profile-image-grayscale-fixed">
+            <img src="assets/images/yo.jpg" alt="Juan Torres - Software Developer" class="img-fluid hero-profile-image-grayscale-fixed">
           </div>
         </div>
   
@@ -1053,7 +878,7 @@ section.mt-5 {
             Un Software Developer apasionado por la innovación y la eficiencia.
           </p>
           <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2 mt-3">
-            <a href="cv.png" download class="btn btn-download-cv btn-lg rounded-pill shadow-sm">
+            <a href="pdf/cv.pdf" download class="btn btn-download-cv btn-lg rounded-pill shadow-sm">
               Descargar CV <i class="bi bi-download"></i>
             </a>
           </div>
@@ -1150,7 +975,7 @@ section.mt-5 {
           <div class="card h-100 text-center shadow-sm">
             <div class="card-body">
               <div class="mb-3">
-                <img src="logo1.png" alt=".NET Logo" style="height: 60px;">
+                <img src="assets/images/logo1.png" alt=".NET Logo" style="height: 60px;">
               </div>
               <h6 class="card-title" id="cardDotnetTitle">.NET</h6>
               <p class="card-text small" id="cardDotnetText">Framework de desarrollo para apps modernas y escalables.</p>
@@ -1235,12 +1060,12 @@ section.mt-5 {
   
           <!-- Certificado 1 (activo) -->
           <div class="carousel-item active">
-            <img src="cer1.png" class="d-block mx-auto w-100 img-fluid rounded shadow-sm" alt="Certificado 1" style="max-height: 400px; object-fit: contain;">
+            <img src="assets/images/cer1.png" class="d-block mx-auto w-100 img-fluid rounded shadow-sm" alt="Certificado 1" style="max-height: 400px; object-fit: contain;">
           </div>
           
           <!-- Certificado 2 (ejemplo) -->
           <div class="carousel-item">
-            <img src="cer2.png" class="d-block mx-auto w-100 img-fluid rounded shadow-sm" alt="Certificado 2" style="max-height: 400px; object-fit: contain;">
+            <img src="assets/images/cer2.png" class="d-block mx-auto w-100 img-fluid rounded shadow-sm" alt="Certificado 2" style="max-height: 400px; object-fit: contain;">
           </div>
   
         </div>
@@ -1299,7 +1124,7 @@ section.mt-5 {
   
           <div class="project-card">
             <div class="project-image-container">
-              <img src="pro1.png" alt="Proyecto 1" class="project-image">
+              <img src="assets/images/pro1.png" alt="Proyecto 1" class="project-image">
             </div>
             <div class="project-info">
               <h3 class="project-title" id="project1Title">Calculadora Contable</h3>
@@ -1327,7 +1152,7 @@ section.mt-5 {
   
           <div class="project-card">
             <div class="project-image-container">
-              <img src="pro2.png" alt="Proyecto 2" class="project-image">
+              <img src="assets/images/pro2.png" alt="Proyecto 2" class="project-image">
             </div>
             <div class="project-info">
               <h3 class="project-title" id="project2Title">Huerto en Mano</h3>
@@ -1355,7 +1180,7 @@ section.mt-5 {
   
           <div class="project-card">
             <div class="project-image-container">
-              <img src="pro3.png" alt="Proyecto 3" class="project-image">
+              <img src="assets/images/pro3.png" alt="Proyecto 3" class="project-image">
             </div>
             <div class="project-info">
               <h3 class="project-title" id="project3Title">Sistema para una Farmacia</h3>
@@ -1393,7 +1218,7 @@ section.mt-5 {
         <div class="col-md-8 col-lg-6 mb-4">
             <div class="testimonial-item p-4 rounded shadow-sm">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="juan.png" class="rounded-circle me-3" alt="Foto de Persona 1" style="width: 60px; height: 60px;">
+                    <img src="assets/images/juan.png" class="rounded-circle me-3" alt="Foto de Persona 1" style="width: 60px; height: 60px;">
                     <div>
                         <h6 class="mb-0 fw-bold">Juan Carlos</h6>
                         <p class="text-muted small mb-0">Programador Front-end</p>
@@ -1406,7 +1231,7 @@ section.mt-5 {
         <div class="col-md-8 col-lg-6 mb-4">
             <div class="testimonial-item p-4 rounded shadow-sm">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="salva.png" class="rounded-circle me-3" alt="Foto de Persona 2" style="width: 60px; height: 60px;">
+                    <img src="assets/images/salva.png" class="rounded-circle me-3" alt="Foto de Persona 2" style="width: 60px; height: 60px;">
                     <div>
                         <h6 class="mb-0 fw-bold">Salvador Andrade</h6>
                         <p class="text-muted small mb-0">Programador Back-end</p>
@@ -1419,7 +1244,7 @@ section.mt-5 {
         <div class="col-md-8 col-lg-6 mb-4">
             <div class="testimonial-item p-4 rounded shadow-sm">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="maria.png" class="rounded-circle me-3" alt="Foto de Persona 3" style="width: 60px; height: 60px;">
+                    <img src="assets/images/maria.png" class="rounded-circle me-3" alt="Foto de Persona 3" style="width: 60px; height: 60px;">
                     <div>
                         <h6 class="mb-0 fw-bold">Marìa Salgado</h6>
                         <p class="text-muted small mb-0">Diseñadora UI/UX</p>
@@ -1432,7 +1257,7 @@ section.mt-5 {
         <div class="col-md-8 col-lg-6 mb-4">
             <div class="testimonial-item p-4 rounded shadow-sm">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="juli.png" class="rounded-circle me-3" alt="Foto de Persona 4" style="width: 60px; height: 60px;">
+                    <img src="assets/images/juli.png" class="rounded-circle me-3" alt="Foto de Persona 4" style="width: 60px; height: 60px;">
                     <div>
                         <h6 class="mb-0 fw-bold">Julissa Sosa</h6>
                         <p class="text-muted small mb-0">Analista de pruebas</p>
@@ -1817,7 +1642,7 @@ section.mt-5 {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 <footer id="footerText" style="background-color: black; color: white; text-align: center; padding: 10px; width: 100%; position: relative; left: 0;">
     © 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.
@@ -2012,6 +1837,9 @@ section.mt-5 {
         
        
 </html>
+
+
+
 
 
 
