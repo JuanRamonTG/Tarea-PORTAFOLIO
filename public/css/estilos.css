@@ -176,17 +176,6 @@ section {
   }
 }
 
-/* Reducción de carga en móviles */
-@media (max-width: 768px) {
-
-  .hero-profile-image-grayscale-fixed,
-  .hero-image-wrapper-grayscale::after {
-    animation: none;
-    /* Desactivar morph en móvil */
-    border-radius: 24px;
-  }
-}
-
 /* ===== GLASS CARDS ===== */
 .card,
 .testimonial-item,
@@ -553,31 +542,6 @@ h2 {
 .testimonial-item:hover {
   border-color: var(--accent) !important;
   transform: translateY(-5px);
-}
-
-/* Optimizaciones de rendimiento para móviles */
-@media (max-width: 768px) {
-  :root {
-    --glass-blur: blur(4px);
-    /* Blur mucho más ligero para ahorrar GPU */
-  }
-
-  .navbar,
-  .card,
-  .testimonial-item,
-  .project-card,
-  .soft-skill-pill,
-  .stat-card {
-    backdrop-filter: none !important;
-    /* Desactivar desenfoque real en móvil */
-    background: rgba(15, 15, 15, 0.95) !important;
-    /* Fondo sólido oscuro para legibilidad */
-  }
-
-  .glow-orb {
-    display: none;
-    /* Eliminar orbes que causan repintados pesados en scroll */
-  }
 }
 
 /* Specific fix for tech interests icons */
