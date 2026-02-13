@@ -1,225 +1,146 @@
-// ===== CONFIGURACIÓN Y ESTADO GLOBAL =====
-const TRANSLATE_APIS = [
-    "https://libretranslate.de/translate",
-    "https://libretranslate.com/translate"
-];
-const DELIM = "___|||___";
-let currentApiIndex = 0;
-
-// Cache para evitar retraducir lo mismo
-const translationCache = new Map();
-
-// ===== SISTEMA DE TRADUCCIÓN AUTOMÁTICA =====
-async function applyAutoTranslation(targetLang) {
-    // Si es español, restaurar original
-    if (targetLang === "es") {
-        restoreOriginalText();
-        document.documentElement.lang = "es";
-        return;
+// ===== CONFIGURACIÓN Y TRADUCCIONES =====
+const translations = {
+    "es": {
+        "navInicio": "Inicio",
+        "navSobreMi": "Sobre mí",
+        "navCertificaciones": "Certificaciones",
+        "navProyectos": "Proyectos",
+        "heroTitle": "Hola, soy <span class='highlight-text-grayscale'>Juan Torres</span>",
+        "heroLead": "Un Software Developer apasionado por la innovación y la eficiencia.",
+        "btnDownload": "Descargar CV <i class='bi bi-download'></i>",
+        "aboutTitle": "Sobre mí",
+        "aboutText": "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript.",
+        "devSkillsTitle": "Habilidades de Programación",
+        "html5Description": "Lenguaje de marcado para estructurar páginas web.",
+        "css3Description": "Estilos visuales para personalizar la apariencia web.",
+        "jsDescription": "Lenguaje de programación para interactividad web.",
+        "bootstrapDescription": "Framework CSS para diseño responsivo y moderno.",
+        "cardDotnetText": "Framework de desarrollo para apps modernas y escalables.",
+        "softSkillsTitle": "Habilidades Blandas",
+        "softSkillDisciplineTitle": "Disciplina",
+        "softSkillDisciplineText": "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
+        "certificationsTitle": "Certificaciones",
+        "techInterestsTitle": "Mis Intereses en la Tecnología",
+        "projectsTitle": "Mis Proyectos",
+        "project1Title": "Calculadora Contable",
+        "project1Description": "El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable.",
+        "project1Status": "Finalizado",
+        "project2Status": "En Desarrollo",
+        "footerText": "© 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados."
+    },
+    "en": {
+        "navInicio": "Home",
+        "navSobreMi": "About Me",
+        "navCertificaciones": "Certifications",
+        "navProyectos": "Projects",
+        "heroTitle": "Hi, I'm <span class='highlight-text-grayscale'>Juan Torres</span>",
+        "heroLead": "A Software Developer passionate about innovation and efficiency.",
+        "btnDownload": "Download CV <i class='bi bi-download'></i>",
+        "aboutTitle": "About Me",
+        "aboutText": "Hi, I'm Juan Ramon, a proud Salvadoran with a boundless passion for creating digital experiences that merge creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools like .NET Core, MySQL, HTML, CSS, and JavaScript.",
+        "devSkillsTitle": "Programming Skills",
+        "html5Description": "Markup language for structuring web pages.",
+        "css3Description": "Visual styles for customizing web appearance.",
+        "jsDescription": "Programming language for web interactivity.",
+        "bootstrapDescription": "CSS Framework for responsive and modern design.",
+        "cardDotnetText": "Development framework for modern and scalable apps.",
+        "softSkillsTitle": "Soft Skills",
+        "softSkillDisciplineTitle": "Discipline",
+        "softSkillDisciplineText": "Consistency in learning, exercise, and personal projects.",
+        "certificationsTitle": "Certifications",
+        "techInterestsTitle": "Tech Interests",
+        "projectsTitle": "My Projects",
+        "project1Title": "Accounting Calculator",
+        "project1Description": "A comprehensive accounting system designed to facilitate financial and accounting management.",
+        "project1Status": "Finished",
+        "project2Status": "In Development",
+        "footerText": "© 2025 Juan Ramón Torres Guzmán. All rights reserved."
     }
+};
 
-    // Obtener todos los nodos de texto traducibles
-    const textNodes = [];
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-        acceptNode(node) {
-            if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
-            const parent = node.parentElement;
-            const tagName = parent.tagName;
-            // Excluir scripts, estilos y elementos ya procesados
-            if (["SCRIPT", "STYLE", "I", "SVG", "CODE"].includes(tagName)) 
-                return NodeFilter.FILTER_REJECT;
-            // No traducir textos muy cortos
-            if (node.nodeValue.trim().length < 2) 
-                return NodeFilter.FILTER_REJECT;
-            return NodeFilter.FILTER_ACCEPT;
-        }
-    });
-
-    let node;
-    while (node = walker.nextNode()) textNodes.push(node);
-
-    // Guardar textos originales si no existen
-    textNodes.forEach(n => {
-        if (!n.parentElement.dataset.origText) 
-            n.parentElement.dataset.origText = n.nodeValue;
-    });
-
-    // Traducir en lotes para mejor rendimiento
-    const batchSize = 5;
-    for (let i = 0; i < textNodes.length; i += batchSize) {
-        const batch = textNodes.slice(i, i + batchSize);
-        await Promise.all(batch.map(node => translateNode(node, targetLang)));
-    }
-    
-    document.documentElement.lang = targetLang;
-}
-
-// Función para traducir un nodo individual
-async function translateNode(node, targetLang) {
-    const originalText = node.parentElement.dataset.origText;
-    
-    // Verificar cache
-    const cacheKey = `${originalText}_${targetLang}`;
-    if (translationCache.has(cacheKey)) {
-        node.nodeValue = translationCache.get(cacheKey);
-        return;
-    }
-
-    // No traducir si ya está en el idioma original
-    if (targetLang === "es") return;
-
-    try {
-        const translatedText = await fetchTranslation(originalText, targetLang);
-        if (translatedText) {
-            node.nodeValue = translatedText;
-            translationCache.set(cacheKey, translatedText);
-        }
-    } catch (error) {
-        console.error("Error traduciendo nodo:", error);
-    }
-}
-
-// Función principal de traducción
-async function fetchTranslation(text, targetLang) {
-    // Intentar con diferentes APIs si una falla
-    for (let i = 0; i < TRANSLATE_APIS.length; i++) {
-        const apiUrl = TRANSLATE_APIS[(currentApiIndex + i) % TRANSLATE_APIS.length];
-        
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout 5s
-
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    q: text,
-                    source: 'auto',
-                    target: targetLang,
-                    format: 'text'
-                }),
-                signal: controller.signal
-            });
-
-            clearTimeout(timeoutId);
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            currentApiIndex = (currentApiIndex + i) % TRANSLATE_APIS.length;
-            return data.translatedText;
-            
-        } catch (error) {
-            console.warn(`Fallo con API ${apiUrl}:`, error.message);
-            // Continuar con la siguiente API
-        }
-    }
-    
-    throw new Error('Todas las APIs de traducción fallaron');
-}
-
-// Restaurar texto original
-function restoreOriginalText() {
-    const elements = document.querySelectorAll('[data-orig-text]');
-    elements.forEach(el => {
-        if (el.dataset.origText) {
-            el.childNodes.forEach(node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    node.nodeValue = el.dataset.origText;
+// ===== ANIMACIONES =====
+function activateAnimation() {
+    const elements = document.querySelectorAll('.hidden, .card, .testimonial-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                if(entry.target.classList.contains('card')) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
                 }
-            });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    elements.forEach((el) => {
+        if(!el.classList.contains('visible')) {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+        }
+        observer.observe(el);
+    });
+}
+
+// ===== SISTEMA DE TRADUCCIÓN POR DICCIONARIO =====
+function applyAutoTranslation(lang) {
+    const langData = translations[lang];
+    
+    // Recorremos las llaves del diccionario y buscamos el elemento por ID
+    Object.keys(langData).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+            // Usamos innerHTML para mantener etiquetas como <span> o <i>
+            element.innerHTML = langData[key];
         }
     });
+
+    document.documentElement.lang = lang;
 }
 
 // ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Activar animaciones
     activateAnimation();
 
-    // 2. Manejo del botón de idioma
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
         let currentLang = localStorage.getItem('lang') || 'es';
-        languageToggle.textContent = currentLang === 'es' ? 'ES/EN' : 'EN/ES';
         
-        languageToggle.addEventListener('click', async () => {
+        // Aplicar idioma guardado al cargar
+        if (currentLang !== 'es') {
+            applyAutoTranslation(currentLang);
+            languageToggle.textContent = 'EN/ES';
+        }
+
+        languageToggle.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
-            languageToggle.disabled = true;
-            languageToggle.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Cargando...';
             
-            try {
-                await applyAutoTranslation(currentLang);
-                localStorage.setItem('lang', currentLang);
-                languageToggle.innerHTML = currentLang === 'es' ? 'ES/EN' : 'EN/ES';
-                
-                // Feedback visual de éxito
-                showToast('Idioma cambiado exitosamente', 'success');
-                
-            } catch (error) {
-                console.error("Error en traducción:", error);
-                showToast('Error al cambiar idioma. Intenta de nuevo.', 'error');
-                // Revertir cambio
-                currentLang = currentLang === 'es' ? 'en' : 'es';
-            } finally {
-                languageToggle.disabled = false;
-            }
+            applyAutoTranslation(currentLang);
+            localStorage.setItem('lang', currentLang);
+            
+            languageToggle.textContent = currentLang === 'es' ? 'ES/EN' : 'EN/ES';
         });
     }
 
-    // 3. Smooth Scroll para navegación
-    setupSmoothScroll();
-});
-
-// Función para mostrar notificaciones
-function showToast(message, type = 'success') {
-    // Puedes usar Bootstrap Toast o SweetAlert
-    const toast = document.createElement('div');
-    toast.className = `toast align-items-center text-white bg-${type === 'success' ? 'success' : 'danger'} border-0 position-fixed bottom-0 end-0 m-3`;
-    toast.setAttribute('role', 'alert');
-    toast.innerHTML = `
-        <div class="d-flex">
-            <div class="toast-body">${message}</div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-        </div>
-    `;
-    document.body.appendChild(toast);
-    
-    if (typeof bootstrap !== 'undefined') {
-        const bsToast = new bootstrap.Toast(toast);
-        bsToast.show();
-    } else {
-        console.log(message);
-    }
-    
-    // Limpiar después de 3 segundos
-    setTimeout(() => toast.remove(), 3000);
-}
-
-// Configurar smooth scroll
-function setupSmoothScroll() {
+    // Smooth Scroll
     document.querySelectorAll('.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            if (this.hash !== "") {
+            if(this.hash !== "") {
                 e.preventDefault();
                 const target = document.querySelector(this.hash);
-                if (target) {
+                if(target) {
                     window.scrollTo({
                         top: target.offsetTop - 70,
                         behavior: 'smooth'
                     });
                 }
-                
-                // Cerrar menú móvil
                 const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                if(navbarCollapse.classList.contains('show')) {
                     bootstrap.Collapse.getInstance(navbarCollapse).hide();
                 }
             }
         });
     });
-}
+});
