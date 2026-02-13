@@ -4,32 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Torres - Software Developer</title>
+    <title>Juan Torres | Software Developer</title>
 
-    <!-- Bootstrap 5.3 CSS -->
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome 5 & 6 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Custom Consolidated CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
     <!-- NAVIGATION -->
+    <!-- DECORATIVE ELEMENTS -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <img src="assets/images/LogoPersonal.png" alt="Logo" style="height: 40px;">
+                <span class="text-accent">&lt;</span>JuanTorres <span class="text-accent">/&gt;</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a id="navInicio" class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
                     </li>
@@ -42,6 +48,9 @@
                     <li class="nav-item">
                         <a id="navProyectos" class="nav-link" href="#proyectos">Proyectos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto" id="navContacto">Contacto</a>
+                    </li>
                     <li class="nav-item ms-lg-3">
                         <button id="languageToggle"
                             class="btn btn-outline-light btn-sm rounded-pill px-3">ES/EN</button>
@@ -51,132 +60,170 @@
         </div>
     </nav>
 
+
     <!-- HERO SECTION -->
     <section id="inicio" class="hero-section-grayscale text-white d-flex align-items-center">
         <div class="container position-relative z-index-1">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-3 col-md-4 order-md-2 order-1 d-flex justify-content-center mb-4 mb-md-0">
-                    <div class="hero-image-wrapper-grayscale">
-                        <img src="assets/images/yo.jpg" alt="Juan Torres - Software Developer"
-                            class="img-fluid hero-profile-image-grayscale-fixed">
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-8 order-md-1 order-2 text-center text-md-start">
-                    <h1 class="display-5 fw-bold mb-2" id="heroTitle">
+            <div class="row align-items-center">
+                <div class="col-lg-7 order-lg-1 order-2 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold mb-3" id="heroTitle">
                         Hola, soy <span class="highlight-text-grayscale">Juan Torres</span>
                     </h1>
-                    <p class="lead mb-3" id="heroLead">
-                        Un Software Developer apasionado por la innovación y la eficiencia.
+                    <p class="lead mb-4 fs-4 text-secondary" id="heroLead">
+                        Un Software Developer apasionado por la innovación y la eficiencia técnica.
                     </p>
                     <div
-                        class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2 mt-3">
+                        class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
                         <a id="btnDownload" href="pdf/cv.pdf" download
-                            class="btn btn-download-cv btn-lg rounded-pill shadow-sm">
-                            Descargar CV <i class="bi bi-download"></i>
+                            class="btn btn-download-cv btn-lg rounded-pill shadow-lg">
+                            Descargar CV <i class="bi bi-download ms-2"></i>
                         </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-lg-2 order-1 d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="hero-image-wrapper-grayscale">
+                        <img src="assets/images/yo.jpg" alt="Juan Torres"
+                            class="img-fluid hero-profile-image-grayscale-fixed">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- HIGHLIGHT STATS -->
+    <section class="container py-0 mt-5 pt-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label" id="statExp">Años Exp.</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label" id="statProjects">Proyectos</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label" id="statCerts">Certificados</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label" id="statPassion">Pasión</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ABOUT SECTION -->
-    <hr>
-    <section id="sobre-mi" class="mt-5 about-section">
+    <section id="sobre-mi" class="mt-5 pt-5 about-section">
         <h2 class="text-center" id="aboutTitle">Sobre mí</h2>
-        <p id="aboutText">Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear
-            experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a
-            proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en
-            crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente
-            impactantes.</p>
+        <div class="container">
+            <div class="card p-4 border-0 shadow-lg mb-4">
+                <p class="lead text-secondary text-center mb-0" id="aboutText">Hola, soy Juan Ramon, un orgulloso
+                    salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y
+                    tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como
+                    .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y
+                    atractivas, que no solo sean funcionales, sino también visualmente impactantes.</p>
+            </div>
+
+            <!-- CORE VALUES -->
+            <div class="row g-4 text-center mt-2">
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="fas fa-layer-group text-accent mb-3 fs-3"></i>
+                        <h4 class="h5 fw-bold" id="value1Title">Arquitectura Limpia</h4>
+                        <p class="small text-secondary" id="value1Desc">Código escalable, organizado y fácil de
+                            mantener.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="fas fa-magic text-accent mb-3 fs-3"></i>
+                        <h4 class="h5 fw-bold" id="value2Title">UX/UI Centrado</h4>
+                        <p class="small text-secondary" id="value2Desc">Diseños que priorizan la experiencia del usuario
+                            final.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3">
+                        <i class="fas fa-rocket text-accent mb-3 fs-3"></i>
+                        <h4 class="h5 fw-bold" id="value3Title">Mejora Continua</h4>
+                        <p class="small text-secondary" id="value3Desc">Constante aprendizaje de nuevas tecnologías y
+                            stacks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROGRAMMING SKILLS -->
-    <section id="habilidades" class="mt-5">
-        <hr>
-        <h3 class="text-center hidden" id="devSkillsTitle">Habilidades de Programación</h3>
-        <br>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                <!-- HTML5 -->
-                <div class="col">
-                    <div class="card h-100 text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#e34f26"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4L1.5 0zM18 6H6.25l.25 2.75H17.6l-.51 5.75-5.09 1.41-5.08-1.41-.31-3.5h2.58l.16 1.8 2.65.72 2.65-.72.3-3.23H6.78L6 6h12z" />
-                                </svg>
-                            </div>
-                            <h6 class="card-title" id="html5Title">HTML5</h6>
-                            <p class="card-text small" id="html5Description">Lenguaje de marcado para estructurar
-                                páginas web.</p>
+    <section id="habilidades" class="container mt-5 pt-5">
+        <h2 class="section-title" id="devSkillsTitle">Habilidades de Programación</h2>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+            <!-- HTML5 -->
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fab fa-html5 fa-3x" style="color: #e34f26;"></i>
                         </div>
+                        <h6 class="fw-bold mb-1" id="html5Title">HTML5</h6>
+                        <p class="small text-secondary mb-0" id="html5Description">Estructura web.</p>
                     </div>
                 </div>
-                <!-- CSS3 -->
-                <div class="col">
-                    <div class="card h-100 text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#1572B6"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4L1.5 0zm15.38 6H7.1l.23 2.75h8.28l-.31 3.5H9.72l.18 2.02 2.1.58 2.1-.58.14-1.6h2.56l-.27 3.02-4.73 1.3-4.73-1.3L6.9 6z" />
-                                </svg>
-                            </div>
-                            <h6 class="card-title" id="css3Title">CSS3</h6>
-                            <p class="card-text small" id="css3Description">Estilos visuales para personalizar la
-                                apariencia web.</p>
+            </div>
+            <!-- CSS3 -->
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fab fa-css3-alt fa-3x" style="color: #1572B6;"></i>
                         </div>
+                        <h6 class="fw-bold mb-1" id="css3Title">CSS3</h6>
+                        <p class="small text-secondary mb-0" id="css3Description">Diseño visual.</p>
                     </div>
                 </div>
-                <!-- JavaScript -->
-                <div class="col">
-                    <div class="card h-100 text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#f7df1e"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M1.5 0h21l-1.91 21.6L12 24l-8.59-2.4L1.5 0zM13.3 17.14c.59.96 1.33 1.6 2.66 1.6 1.12 0 1.84-.56 1.84-1.33 0-.93-.73-1.26-1.96-1.8l-.67-.28c-1.94-.83-3.23-1.87-3.23-4.07 0-2.03 1.55-3.58 3.97-3.58 1.72 0 2.96.6 3.85 2.17l-2.11 1.35c-.46-.83-.96-1.17-1.74-1.17-.79 0-1.3.5-1.3 1.17 0 .82.5 1.15 1.66 1.66l.67.28c2.27.97 3.56 1.97 3.56 4.2 0 2.4-1.89 3.7-4.43 3.7-2.49 0-4.1-1.18-4.89-2.72zm-6.94.24c.38.67.72 1.24 1.54 1.24.79 0 1.3-.31 1.3-1.53V9.86h2.49v7.25c0 2.59-1.52 3.77-3.74 3.77-2.01 0-3.18-1.04-3.78-2.32l2.19-1.18z" />
-                                </svg>
-                            </div>
-                            <h6 class="card-title" id="jsTitle">JavaScript</h6>
-                            <p class="card-text small" id="jsDescription">Lenguaje de programación para interactividad
-                                web.</p>
+            </div>
+            <!-- JavaScript -->
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fab fa-js fa-3x" style="color: #f7df1e;"></i>
                         </div>
+                        <h6 class="fw-bold mb-1" id="jsTitle">JavaScript</h6>
+                        <p class="small text-secondary mb-0" id="jsDescription">Interactividad.</p>
                     </div>
                 </div>
-                <!-- Bootstrap -->
-                <div class="col">
-                    <div class="card h-100 text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 256 256"
-                                    fill="#7952B3">
-                                    <path
-                                        d="M38.74 0C17.35 0 0 17.35 0 38.74v178.52C0 238.65 17.35 256 38.74 256h178.52c21.4 0 38.74-17.35 38.74-38.74V38.74C256 17.35 238.65 0 217.26 0H38.74Zm135.14 200.78c-8.82 6.05-19.4 8.96-33.56 8.96H86.43V47.9h52.71c13.57 0 23.56 2.63 30.44 7.82 6.87 5.2 10.3 13.34 10.3 24.33 0 5.77-1.4 10.88-4.2 15.35-2.8 4.47-7.14 8.2-13.03 11.2 7.32 2.34 12.88 6.1 16.67 11.3 3.8 5.2 5.7 11.58 5.7 19.14 0 12.31-4.4 21.69-13.1 28.18ZM112.5 105.15h26.46c6.25 0 11.13-1.47 14.64-4.41 3.5-2.94 5.26-7.1 5.26-12.49 0-5.34-1.67-9.3-5.02-11.9-3.34-2.6-8.33-3.9-14.96-3.9H112.5v32.7Zm0 17.83v38.1h28.25c6.67 0 11.9-1.67 15.69-5 3.8-3.33 5.7-8 5.7-14 0-5.62-1.88-10.15-5.64-13.58-3.75-3.42-9.15-5.13-16.21-5.13H112.5Z" />
-                                </svg>
-                            </div>
-                            <h6 class="card-title" id="bootstrapTitle">Bootstrap</h6>
-                            <p class="card-text small" id="bootstrapDescription">Framework CSS para diseño responsivo y
-                                moderno.</p>
+            </div>
+            <!-- Bootstrap -->
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fab fa-bootstrap fa-3x" style="color: #7952B3;"></i>
                         </div>
+                        <h6 class="fw-bold mb-1" id="bootstrapTitle">Bootstrap</h6>
+                        <p class="small text-secondary mb-0" id="bootstrapDescription">Framework CSS.</p>
                     </div>
                 </div>
-                <!-- .NET -->
-                <div class="col">
-                    <div class="card h-100 text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <img src="assets/images/LogoNetCore.png" alt=".NET Logo" style="height: 60px;">
-                            </div>
-                            <h6 class="card-title" id="cardDotnetTitle">.NET</h6>
-                            <p class="card-text small" id="cardDotnetText">Framework de desarrollo para apps modernas y
-                                escalables.</p>
+            </div>
+            <!-- .NET -->
+            <div class="col">
+                <div class="card h-100 text-center shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <img src="assets/images/LogoNetCore.png" alt=".NET"
+                                style="height: 48px; filter: drop-shadow(0 0 5px rgba(81, 43, 212, 0.5));">
                         </div>
+                        <h6 class="fw-bold mb-1" id="cardDotnetTitle">.NET</h6>
+                        <p class="small text-secondary mb-0" id="cardDotnetText">Apps modernas.</p>
                     </div>
                 </div>
             </div>
@@ -184,59 +231,35 @@
     </section>
 
     <!-- SOFT SKILLS -->
-    <section class="mt-5">
-        <hr>
-        <h3 class="text-center hidden" id="softSkillsTitle">Habilidades Blandas</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow rounded-4 text-center p-3">
-                        <div class="mb-2"><i class="fas fa-clock fa-lg text-primary"></i></div>
-                        <h5 id="softSkillDisciplineTitle">Disciplina</h5>
-                        <p class="small" id="softSkillDisciplineText">Constancia en el aprendizaje, el ejercicio y los
-                            proyectos personales.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow rounded-4 text-center p-3">
-                        <div class="mb-2"><i class="fas fa-search fa-lg text-success"></i></div>
-                        <h5 id="softSkillCuriosityTitle">Curiosidad</h5>
-                        <p class="small" id="softSkillCuriosityText">Interés natural por aprender, explorar nuevas ideas
-                            y profundizar en lo técnico.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow rounded-4 text-center p-3">
-                        <div class="mb-2"><i class="fas fa-mountain fa-lg text-danger"></i></div>
-                        <h5 id="softSkillPerseveranceTitle">Perseverancia</h5>
-                        <p class="small" id="softSkillPerseveranceText">No te rindes fácilmente y retomas metas hasta
-                            lograr resultados concretos.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow rounded-4 text-center p-3">
-                        <div class="mb-2"><i class="fas fa-pencil-alt fa-lg text-warning"></i></div>
-                        <h5 id="softSkillSelfCriticismTitle">Autocrítica</h5>
-                        <p class="small" id="softSkillSelfCriticismText">Capacidad para reconocer tus puntos débiles y
-                            mejorar sobre ellos.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow rounded-4 text-center p-3">
-                        <div class="mb-2"><i class="fas fa-comments fa-lg text-info"></i></div>
-                        <h5 id="softSkillCommunicationTitle">Comunicación</h5>
-                        <p class="small" id="softSkillCommunicationText">Capacidad para transmitir ideas, pensamientos y
-                            cuestionamientos de manera clara y eficaz.</p>
-                    </div>
-                </div>
+    <section class="container mt-5 pt-5">
+        <h2 class="section-title" id="softSkillsTitle">Habilidades Blandas</h2>
+        <div class="soft-skills-container">
+            <div class="soft-skill-pill hidden">
+                <i class="fas fa-clock fa-lg text-primary me-2"></i>
+                <span id="softSkillDisciplineTitle" class="fw-bold">Disciplina</span>
+            </div>
+            <div class="soft-skill-pill hidden">
+                <i class="fas fa-search fa-lg text-success me-2"></i>
+                <span id="softSkillCuriosityTitle" class="fw-bold">Curiosidad</span>
+            </div>
+            <div class="soft-skill-pill hidden">
+                <i class="fas fa-mountain fa-lg text-danger me-2"></i>
+                <span id="softSkillPerseveranceTitle" class="fw-bold">Perseverancia</span>
+            </div>
+            <div class="soft-skill-pill hidden">
+                <i class="fas fa-pencil-alt fa-lg text-warning me-2"></i>
+                <span id="softSkillSelfCriticismTitle" class="fw-bold">Autocrítica</span>
+            </div>
+            <div class="soft-skill-pill hidden">
+                <i class="fas fa-comments fa-lg text-info me-2"></i>
+                <span id="softSkillCommunicationTitle" class="fw-bold">Comunicación</span>
             </div>
         </div>
     </section>
 
     <!-- CERTIFICATIONS CAROUSEL -->
-    <section id="certificaciones" class="mt-5">
-        <hr>
-        <h3 id="certificationsTitle" class="text-center mb-4">Certificaciones</h3>
+    <section id="certificaciones" class="container">
+        <h2 id="certificationsTitle" class="section-title">Certificaciones</h2>
         <div class="container">
             <div id="carouselCertificaciones" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner text-center">
@@ -262,9 +285,8 @@
     </section>
 
     <!-- TECH INTERESTS -->
-    <section class="mt-5">
-        <hr>
-        <h3 class="text-center" id="techInterestsTitle">Mis Intereses en la Tecnología</h3>
+    <section id="intereses" class="container">
+        <h2 class="section-title" id="techInterestsTitle">Intereses Tecnológicos</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -304,82 +326,86 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="proyectos" class="projects-section">
-        <hr>
-        <div class="projects-container">
-            <h2 class="projects-title" id="projectsTitle">Mis Proyectos</h2>
-            <hr class="section-divider">
-            <div class="projects-carousel">
-                <div class="projects-track" id="projectsTrack">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="assets/images/pro1.png" alt="Proyecto 1" class="project-image">
+    <section id="proyectos" class="container mt-5 pt-5">
+        <h2 class="section-title" id="projectsTitle">Proyectos Destacados</h2>
+        <div class="projects-track">
+            <!-- Project 1 -->
+            <div class="project-card shadow-lg">
+                <div class="project-image-container">
+                    <img src="assets/images/pro1.png" alt="Calculadora Contable" class="project-image">
+                </div>
+                <div class="project-info">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="h4 fw-bold mb-0" id="project1Title">Calculadora Contable</h3>
+                        <span class="tech-tag" id="project1Status">Finalizado</span>
+                    </div>
+                    <p class="text-secondary small mb-4" id="project1Description">Herramienta integral para facilitar la
+                        gestión financiera y contable con cálculos automatizados.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JS</span>
                         </div>
-                        <div class="project-info">
-                            <h3 class="project-title" id="project1Title">Calculadora Contable</h3>
-                            <p class="project-description" id="project1Description">El sistema contable es una
-                                herramienta integral diseñada para facilitar la gestión financiera y contable.</p>
-                            <div class="project-meta">
-                                <div class="project-tech">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag status-tag status-finished"
-                                        id="project1Status">Finalizado</span>
-                                </div>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank"
-                                    class="project-link viewProjectBtn">Ver Proyecto</a>
-                            </div>
+                        <div class="d-flex gap-2">
+                            <a href="https://github.com/JuanRamonTG/AppCalculadoraContable" target="_blank"
+                                class="project-link flex-grow-1 text-center viewProjectBtn">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="assets/images/pro2.png" alt="Proyecto 2" class="project-image">
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card shadow-lg">
+                <div class="project-image-container">
+                    <img src="assets/images/pro2.png" alt="Huerto en Mano" class="project-image">
+                </div>
+                <div class="project-info">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="h4 fw-bold mb-0" id="project2Title">Huerto en Mano</h3>
+                        <span class="tech-tag text-info border-info" id="project2Status">En Desarrollo</span>
+                    </div>
+                    <p class="text-secondary small mb-4" id="project2Description">Plataforma de gestión de huertos
+                        urbanos con foros blockchain y visualización de datos.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Web3</span>
+                            <span class="tech-tag">DataViz</span>
+                            <span class="tech-tag">CSS3</span>
                         </div>
-                        <div class="project-info">
-                            <h3 class="project-title" id="project2Title">Huerto en Mano</h3>
-                            <p class="project-description" id="project2Description">Plataforma para gestión de huertos
-                                urbanos, incluyendo foros de blockchain y visualización de datos.</p>
-                            <div class="project-meta">
-                                <div class="project-tech">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">Blockchain</span>
-                                    <span class="tech-tag status-tag status-development" id="project2Status">En
-                                        Desarrollo</span>
-                                </div>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank"
-                                    class="project-link viewProjectBtn">Ver Proyecto</a>
-                            </div>
+                        <div class="d-flex gap-2">
+                            <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank"
+                                class="project-link flex-grow-1 text-center viewProjectBtn">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="assets/images/pro3.png" alt="Proyecto 3" class="project-image">
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card shadow-lg">
+                <div class="project-image-container">
+                    <img src="assets/images/pro3.png" alt="Sistema Farmacia" class="project-image">
+                </div>
+                <div class="project-info">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="h4 fw-bold mb-0" id="project3Title">Sistema Farmacia</h3>
+                        <span class="tech-tag" id="project3Status">Finalizado</span>
+                    </div>
+                    <p class="text-secondary small mb-4" id="project3Description">Software integral que automatiza
+                        operaciones clave, garantizando eficiencia y precisión en inventarios.</p>
+                    <div class="mt-auto">
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">.NET</span>
                         </div>
-                        <div class="project-info">
-                            <h3 class="project-title" id="project3Title">Sistema para una Farmacia</h3>
-                            <p class="project-description" id="project3Description">Software integral que automatiza y
-                                controla las operaciones clave, garantizando eficiencia y precisión.</p>
-                            <div class="project-meta">
-                                <div class="project-tech">
-                                    <span class="tech-tag">C#</span>
-                                    <span class="tech-tag">SqlServer</span>
-                                    <span class="tech-tag status-tag status-finished"
-                                        id="project3Status">Finalizado</span>
-                                </div>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank"
-                                    class="project-link viewProjectBtn">Ver Proyecto</a>
-                            </div>
+                        <div class="d-flex gap-2">
+                            <a href="https://github.com/JuanRamonTG/SistemaFarmacia" target="_blank"
+                                class="project-link flex-grow-1 text-center viewProjectBtn">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -387,80 +413,151 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="container my-5">
-        <h3 class="text-center mb-4" id="testimonialsSectionTitle">Lo que dicen sobre mí</h3>
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 mb-4">
-                <div class="testimonial-item p-4 rounded shadow-sm">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="assets/images/juan.png" class="rounded-circle me-3" alt="Juan Carlos"
-                            style="width: 60px; height: 60px;">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Juan Carlos</h6>
-                            <p class="text-muted small mb-0" id="testimonial1Role">Programador Front-end</p>
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonios">
+        <div class="container">
+            <h2 class="section-title" id="testimonialsSectionTitle">Reconocimiento Profesional</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 testimonial-item p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/juan.png" class="rounded-circle me-3 border border-2 border-primary"
+                                alt="Juan Carlos" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Juan Carlos Mejía</h6>
+                                <p class="text-secondary small mb-0" id="testimonial1Role">Lead
+                                    Front-end Developer</p>
+                            </div>
                         </div>
+                        <p class="fst-italic text-secondary mb-0" id="testimonial1Text">"Su
+                            curiosidad técnica y
+                            <strong>perseverancia</strong> ante desafíos complejos lo convierten en
+                            un activo valioso en
+                            cualquier equipo de desarrollo."
+                        </p>
                     </div>
-                    <p class="fst-italic mb-0" id="testimonial1Text">"Su curiosidad y <strong>perseverancia</strong> son
-                        excepcionales."</p>
                 </div>
-            </div>
-            <div class="col-md-8 col-lg-6 mb-4">
-                <div class="testimonial-item p-4 rounded shadow-sm">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="assets/images/salva.png" class="rounded-circle me-3" alt="Salvador"
-                            style="width: 60px; height: 60px;">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Salvador Andrade</h6>
-                            <p class="text-muted small mb-0" id="testimonial2Role">Programador Back-end</p>
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 testimonial-item p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/salva.png"
+                                class="rounded-circle me-3 border border-2 border-primary" alt="Salvador"
+                                style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Salvador Andrade</h6>
+                                <p class="text-secondary small mb-0" id="testimonial2Role">Senior
+                                    Back-end Engineer</p>
+                            </div>
                         </div>
+                        <p class="fst-italic text-secondary mb-0" id="testimonial2Text">"Se destaca
+                            por una
+                            <strong>disciplina</strong> inquebrantable y una capacidad de
+                            autocrítica que impulsa una mejora
+                            continua constante."
+                        </p>
                     </div>
-                    <p class="fst-italic mb-0" id="testimonial2Text">"Se destaca por su <strong>disciplina</strong> y su
-                        capacidad de autocrítica."</p>
                 </div>
-            </div>
-            <div class="col-md-8 col-lg-6 mb-4">
-                <div class="testimonial-item p-4 rounded shadow-sm">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="assets/images/maria.png" class="rounded-circle me-3" alt="Maria"
-                            style="width: 60px; height: 60px;">
-                        <div>
-                            <h6 class="mb-0 fw-bold">María Salgado</h6>
-                            <p class="text-muted small mb-0" id="testimonial3Role">Diseñadora UI/UX</p>
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 testimonial-item p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/maria.png"
+                                class="rounded-circle me-3 border border-2 border-primary" alt="Maria"
+                                style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">María Salgado</h6>
+                                <p class="text-secondary small mb-0" id="testimonial3Role">UX/UI
+                                    Design Lead</p>
+                            </div>
                         </div>
+                        <p class="fst-italic text-secondary mb-0" id="testimonial3Text">"Su
+                            habilidad de
+                            <strong>comunicación</strong> técnica permite que la colaboración entre
+                            diseño y desarrollo sea
+                            fluida y altamente efectiva."
+                        </p>
                     </div>
-                    <p class="fst-italic mb-0" id="testimonial3Text">"La <strong>comunicación</strong> es excepcional."
-                    </p>
                 </div>
-            </div>
-            <div class="col-md-8 col-lg-6 mb-4">
-                <div class="testimonial-item p-4 rounded shadow-sm">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="assets/images/juli.png" class="rounded-circle me-3" alt="Julissa"
-                            style="width: 60px; height: 60px;">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Julissa Sosa</h6>
-                            <p class="text-muted small mb-0" id="testimonial4Role">Analista de pruebas</p>
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 testimonial-item p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/juli.png" class="rounded-circle me-3 border border-2 border-primary"
+                                alt="Julissa" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Julissa Sosa</h6>
+                                <p class="text-secondary small mb-0" id="testimonial4Role">Senior QA
+                                    Analyst</p>
+                            </div>
                         </div>
+                        <p class="fst-italic text-secondary mb-0" id="testimonial4Text">"Es un
+                            <strong>trabajador innato</strong>
+                            con una atención al detalle envidiable. Siempre buscando optimizar la
+                            calidad del código."
+                        </p>
                     </div>
-                    <p class="fst-italic mb-0" id="testimonial4Text">"Es un <strong>trabajador innato</strong> y le
-                        gusta mejorar constantemente."</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- INTERACTIVE TERMINAL -->
+    <section id="interaccion" class="container">
+        <h2 class="section-title">Interacción Directa</h2>
+        <div class="terminal-container shadow-lg">
+            <div class="terminal-header">
+                <div class="dot bg-danger"></div>
+                <div class="dot bg-warning"></div>
+                <div class="dot bg-success"></div>
+                <span class="ms-2 small text-secondary">juan-torres -- zsh</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line mb-2">
+                    <span class="text-accent">> status</span><br>
+                    <span class="text-secondary">Ready to innovate. Type <b>help</b> to
+                        start.</span>
+                </div>
+            </div>
+            <div class="terminal-input-wrapper">
+                <span class="text-accent me-2">></span>
+                <input type="text" id="terminal-input" placeholder="Escribe un comando..." autocomplete="off">
+            </div>
+        </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer id="footerText"
-        style="background-color: black; color: white; text-align: center; padding: 10px; width: 100%;">
-        © 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados.
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="mt-5 py-5 border-top border-secondary border-opacity-10">
+        <div class="container text-center">
+            <div class="mb-4">
+                <h4 class="fw-bold mb-3" id="footerSocialTitle">Conectemos</h4>
+                <div class="social-links-footer">
+                    <!-- El usuario debe completar con sus enlaces aquí -->
+                    <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/JuanRamonTG" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/tu-usuario" target="_blank" class="social-icon" title="Twitter/X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="mailto:tu-correo@ejemplo.com" class="social-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="text-secondary small mb-4" id="footerSocialDesc">¿Tienes una idea?
+                    Trabajemos juntos para
+                    hacerla realidad.</p>
+            </div>
+            <div class="pt-4 border-top border-secondary border-opacity-10">
+                <p class="mb-0 text-secondary small" id="footerText">© 2025 Juan Ramón Torres
+                    Guzmán. Desarrollado con
+                    pasión y código limpio.</p>
+            </div>
+        </div>
     </footer>
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- SCRIPTS -->
-    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom Consolidated JavaScript -->
     <script src="js/script.js"></script>
 </body>
 

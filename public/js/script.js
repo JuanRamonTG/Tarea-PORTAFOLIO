@@ -4,156 +4,219 @@ const translations = {
         "navSobreMi": "Sobre mí",
         "navCertificaciones": "Certificaciones",
         "navProyectos": "Proyectos",
+        "navContacto": "Contacto",
         "heroTitle": "Hola, soy <span class='highlight-text-grayscale'>Juan Torres</span>",
-        "heroLead": "Un Software Developer apasionado por la innovación y la eficiencia.",
+        "heroLead": "Software Developer especializado en construir soluciones eficientes y escalables.",
         "btnDownload": "Descargar CV <i class='bi bi-download'></i>",
         "aboutTitle": "Sobre mí",
-        "aboutText": "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript.",
+        "aboutText": "Hola, soy Juan Ramon, un orgulloso salvadoreño con una pasión desbordante por crear experiencias digitales que fusionan creatividad y tecnología. Desde El Salvador, me dedico a dar vida a proyectos web utilizando herramientas como .NET Core, MySQL, HTML, CSS y JavaScript. Mi enfoque está en crear interfaces intuitivas y atractivas, que no solo sean funcionales, sino también visualmente impactantes.",
+        "value1Title": "Arquitectura Limpia",
+        "value1Desc": "Código escalable, organizado y fácil de mantener.",
+        "value2Title": "UX/UI Centrado",
+        "value2Desc": "Diseños que priorizan la experiencia del usuario final.",
+        "value3Title": "Mejora Continua",
+        "value3Desc": "Constante aprendizaje de nuevas tecnologías y stacks.",
         "devSkillsTitle": "Habilidades de Programación",
         "html5Title": "HTML5",
-        "html5Description": "Lenguaje de marcado para estructurar páginas web.",
+        "html5Description": "Arquitectura semántica.",
         "css3Title": "CSS3",
-        "css3Description": "Estilos visuales para personalizar la apariencia web.",
+        "css3Description": "Estilos y Layouts.",
         "jsTitle": "JavaScript",
-        "jsDescription": "Lenguaje de programación para interactividad web.",
+        "jsDescription": "Comportamiento dinámico.",
         "bootstrapTitle": "Bootstrap",
-        "bootstrapDescription": "Framework CSS para diseño responsivo y moderno.",
+        "bootstrapDescription": "Framework CSS.",
         "cardDotnetTitle": ".NET",
-        "cardDotnetText": "Framework de desarrollo para apps modernas y escalables.",
+        "cardDotnetText": "Backend robusto y escalable.",
         "softSkillsTitle": "Habilidades Blandas",
         "softSkillDisciplineTitle": "Disciplina",
-        "softSkillDisciplineText": "Constancia en el aprendizaje, el ejercicio y los proyectos personales.",
+        "softSkillDisciplineText": "Constancia en el aprendizaje y proyectos profesionales.",
         "softSkillCuriosityTitle": "Curiosidad",
-        "softSkillCuriosityText": "Interés natural por aprender, explorar nuevas ideas y profundizar en lo técnico.",
+        "softSkillCuriosityText": "Interés natural por aprender y profundizar en lo técnico.",
         "softSkillPerseveranceTitle": "Perseverancia",
-        "softSkillPerseveranceText": "No te rindes fácilmente y retomas metas hasta lograr resultados concretos.",
+        "softSkillPerseveranceText": "Enfoque en metas hasta lograr resultados concretos.",
         "softSkillSelfCriticismTitle": "Autocrítica",
-        "softSkillSelfCriticismText": "Capacidad para reconocer tus puntos débiles y mejorar sobre ellos.",
+        "softSkillSelfCriticismText": "Capacidad de mejora continua sobre puntos débiles.",
         "softSkillCommunicationTitle": "Comunicación",
-        "softSkillCommunicationText": "Capacidad para transmitir ideas, pensamientos y cuestionamientos de manera clara y eficaz.",
+        "softSkillCommunicationText": "Transmisión clara y eficaz de ideas técnicas.",
         "certificationsTitle": "Certificaciones",
-        "techInterestsTitle": "Mis Intereses en la Tecnología",
+        "techInterestsTitle": "Intereses Tecnológicos",
         "interestIATitle": "Inteligencia Artificial",
-        "interestIADesc": "Fascinado por el aprendizaje automático y cómo las IA están transformando el mundo tecnológico.",
-        "interestFullstackTitle": "Desarrollo Web Fullstack",
-        "interestFullstackDesc": "Me apasiona construir soluciones web completas desde la interfaz de usuario hasta la gestión de bases de datos.",
+        "interestIADesc": "Fascinado por el aprendizaje automático y su impacto transformador.",
+        "interestFullstackTitle": "Desarrollo Fullstack",
+        "interestFullstackDesc": "Construcción de soluciones web completas de extremo a extremo.",
         "interestCyberTitle": "Ciberseguridad",
-        "interestCyberDesc": "El mundo de la ciberseguridad me atrae por su constante evolución y la importancia de proteger la información.",
-        "interestVRARTitle": "Realidad Virtual/Aumentada",
-        "interestVRARDesc": "Estoy entusiasmado con el potencial de la realidad virtual y aumentada para crear experiencias inmersivas.",
-        "projectsTitle": "Mis Proyectos",
+        "interestCyberDesc": "Importancia de la protección de datos en entornos digitales.",
+        "interestVRARTitle": "Realidad Extendida",
+        "interestVRARDesc": "Inmersión y experiencias de usuario de próxima generación.",
+        "projectsTitle": "Portfolio de Proyectos",
         "project1Title": "Calculadora Contable",
-        "project1Description": "El sistema contable es una herramienta integral diseñada para facilitar la gestión financiera y contable.",
+        "project1Description": "Sistema integral de gestión financiera y contable con cálculos automatizados en tiempo real.",
         "project1Status": "Finalizado",
         "project2Title": "Huerto en Mano",
-        "project2Description": "Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.",
+        "project2Description": "Ecosistema digital para la gestión de huertos urbanos con integración de datos.",
         "project2Status": "En Desarrollo",
-        "project3Title": "Sistema para una Farmacia",
-        "project3Description": "Software integral que automatiza y controla las operaciones clave, garantizando eficiencia y precisión.",
+        "project3Title": "Sistema Farmacia",
+        "project3Description": "Solución empresarial para la automatización de inventarios y ventas.",
         "project3Status": "Finalizado",
-        "viewProjectBtn": "Ver Proyecto",
-        "testimonialsSectionTitle": "Lo que dicen sobre mí",
-        "testimonial1Role": "Programador Front-end",
-        "testimonial1Text": "Su curiosidad y <strong>perseverancia</strong> son excepcionales.",
-        "testimonial2Role": "Programador Back-end",
-        "testimonial2Text": "Se destaca por su <strong>disciplina</strong> y su capacidad de autocrítica.",
-        "testimonial3Role": "Diseñadora UI/UX",
-        "testimonial3Text": "La <strong>comunicación</strong> es excepcional.",
-        "testimonial4Role": "Analista de pruebas",
-        "testimonial4Text": "Es un <strong>trabajador innato</strong> y le gusta mejorar constantemente.",
-        "footerText": "© 2025 Juan Ramón Torres Guzmán. Todos los derechos reservados."
+        "viewProjectBtn": "<i class='fab fa-github me-1'></i> Repositorio",
+        "testimonialsSectionTitle": "Reconocimiento Profesional",
+        "testimonial1Role": "Lead Front-end Developer",
+        "testimonial1Text": "Su curiosidad técnica y <strong>perseverancia</strong> son excepcionales.",
+        "testimonial2Role": "Senior Back-end Engineer",
+        "testimonial2Text": "Destaca por su <strong>disciplina</strong> y capacidad de autocrítica.",
+        "testimonial3Role": "UX/UI Design Lead",
+        "testimonial3Text": "La <strong>comunicación</strong> técnica es fluida y efectiva.",
+        "testimonial4Role": "Senior QA Analyst",
+        "testimonial4Text": "Atención al detalle y enfoque en la optimización de calidad.",
+        "footerSocialTitle": "Conectemos",
+        "footerSocialDesc": "¿Tienes una idea? Trabajemos juntos para hacerla realidad.",
+        "statExp": "Años Exp.",
+        "statProjects": "Proyectos",
+        "statCerts": "Certificados",
+        "statPassion": "Pasión",
+        "footerText": "© 2025 Juan Ramón Torres Guzmán. Desarrollado con pasión y código limpio."
     },
     "en": {
         "navInicio": "Home",
         "navSobreMi": "About Me",
         "navCertificaciones": "Certifications",
         "navProyectos": "Projects",
+        "navContacto": "Contact",
         "heroTitle": "Hi, I'm <span class='highlight-text-grayscale'>Juan Torres</span>",
-        "heroLead": "A Software Developer passionate about innovation and efficiency.",
+        "heroLead": "Software Developer specialized in building efficient and scalable solutions.",
         "btnDownload": "Download CV <i class='bi bi-download'></i>",
         "aboutTitle": "About Me",
-        "aboutText": "Hi, I'm Juan Ramon, a proud Salvadoran with a boundless passion for creating digital experiences that merge creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools like .NET Core, MySQL, HTML, CSS, and JavaScript.",
-        "devSkillsTitle": "Programming Skills",
+        "aboutText": "Hello, I am Juan Ramon, a proud Salvadoran with an overflowing passion for creating digital experiences that blend creativity and technology. From El Salvador, I dedicate myself to bringing web projects to life using tools like .NET Core, MySQL, HTML, CSS, and JavaScript. My focus is on creating intuitive and engaging interfaces that are not only functional but also visually striking.",
+        "value1Title": "Clean Architecture",
+        "value1Desc": "Scalable, organized, and easy-to-maintain code.",
+        "value2Title": "HCD Focused",
+        "value2Desc": "Designs that prioritize the final user experience.",
+        "value3Title": "Continuous Growth",
+        "value3Desc": "Constant learning of new technologies and stacks.",
+        "devSkillsTitle": "Tech Stack",
         "html5Title": "HTML5",
-        "html5Description": "Markup language for structuring web pages.",
+        "html5Description": "Semantic architecture.",
         "css3Title": "CSS3",
-        "css3Description": "Visual styles for customizing web appearance.",
+        "css3Description": "Styles and Layouts.",
         "jsTitle": "JavaScript",
-        "jsDescription": "Programming language for web interactivity.",
+        "jsDescription": "Dynamic behavior.",
         "bootstrapTitle": "Bootstrap",
-        "bootstrapDescription": "CSS Framework for responsive and modern design.",
+        "bootstrapDescription": "CSS Framework.",
         "cardDotnetTitle": ".NET",
-        "cardDotnetText": "Development framework for modern and scalable apps.",
+        "cardDotnetText": "Robust and scalable backend.",
         "softSkillsTitle": "Soft Skills",
         "softSkillDisciplineTitle": "Discipline",
-        "softSkillDisciplineText": "Consistency in learning, exercise, and personal projects.",
+        "softSkillDisciplineText": "Consistency in learning and professional projects.",
         "softSkillCuriosityTitle": "Curiosity",
-        "softSkillCuriosityText": "Natural interest in learning, exploring new ideas, and deepening technical knowledge.",
+        "softSkillCuriosityText": "Natural interest in learning and technical depth.",
         "softSkillPerseveranceTitle": "Perseverance",
-        "softSkillPerseveranceText": "You don't give up easily and keep working on goals until achieving concrete results.",
+        "softSkillPerseveranceText": "Goal-oriented focus until achieving results.",
         "softSkillSelfCriticismTitle": "Self-criticism",
-        "softSkillSelfCriticismText": "Ability to recognize your weak points and improve on them.",
+        "softSkillSelfCriticismText": "Capacity for continuous improvement on weak points.",
         "softSkillCommunicationTitle": "Communication",
-        "softSkillCommunicationText": "Ability to convey ideas, thoughts, and questions clearly and effectively.",
+        "softSkillCommunicationText": "Clear and effective technical ideas transmission.",
         "certificationsTitle": "Certifications",
         "techInterestsTitle": "Tech Interests",
         "interestIATitle": "Artificial Intelligence",
-        "interestIADesc": "Fascinated by machine learning and how AIs are transforming the tech world.",
-        "interestFullstackTitle": "Fullstack Web Development",
-        "interestFullstackDesc": "I'm passionate about building complete web solutions from the user interface to database management.",
+        "interestIADesc": "Fascinated by machine learning and its transformative impact.",
+        "interestFullstackTitle": "Fullstack Development",
+        "interestFullstackDesc": "Building complete end-to-end web solutions.",
         "interestCyberTitle": "Cybersecurity",
-        "interestCyberDesc": "The world of cybersecurity attracts me for its constant evolution and the importance of protecting information.",
-        "interestVRARTitle": "Virtual/Augmented Reality",
-        "interestVRARDesc": "I'm excited about the potential of virtual and augmented reality to create immersive experiences.",
-        "projectsTitle": "My Projects",
+        "interestCyberDesc": "Importance of data protection in digital environments.",
+        "interestVRARTitle": "Extended Reality",
+        "interestVRARDesc": "Immersion and next-generation user experiences.",
+        "projectsTitle": "Project Portfolio",
         "project1Title": "Accounting Calculator",
-        "project1Description": "A comprehensive accounting system designed to facilitate financial and accounting management.",
+        "project1Description": "Financial management system with real-time automated calculations.",
         "project1Status": "Finished",
         "project2Title": "Huerto en Mano",
-        "project2Description": "Platform for urban garden management, including blockchain forums and data visualization.",
+        "project2Description": "Digital ecosystem for urban garden management with data integration.",
         "project2Status": "In Development",
         "project3Title": "Pharmacy System",
-        "project3Description": "Comprehensive software that automates and controls key operations, ensuring efficiency and accuracy.",
+        "project3Description": "Enterprise solution for inventory and sales automation.",
         "project3Status": "Finished",
-        "viewProjectBtn": "View Project",
-        "testimonialsSectionTitle": "What they say about me",
-        "testimonial1Role": "Front-end Developer",
-        "testimonial1Text": "His curiosity and <strong>perseverance</strong> are exceptional.",
-        "testimonial2Role": "Back-end Developer",
-        "testimonial2Text": "He stands out for his <strong>discipline</strong> and his ability for self-criticism.",
-        "testimonial3Role": "UI/UX Designer",
-        "testimonial3Text": "<strong>Communication</strong> is exceptional.",
-        "testimonial4Role": "QA Analyst",
-        "testimonial4Text": "He is a <strong>natural worker</strong> and likes to constantly improve.",
-        "footerText": "© 2025 Juan Ramón Torres Guzmán. All rights reserved."
+        "viewProjectBtn": "<i class='fab fa-github me-1'></i> Repository",
+        "testimonialsSectionTitle": "Professional Recognition",
+        "testimonial1Role": "Lead Front-end Developer",
+        "testimonial1Text": "His technical curiosity and <strong>perseverance</strong> are exceptional.",
+        "testimonial2Role": "Senior Back-end Engineer",
+        "testimonial2Text": "Stands out for his <strong>discipline</strong> and self-criticism ability.",
+        "testimonial3Role": "UX/UI Design Lead",
+        "testimonial3Text": "Technical <strong>communication</strong> is fluid and effective.",
+        "testimonial4Role": "Senior QA Analyst",
+        "testimonial4Text": "Attention to detail and focus on quality optimization.",
+        "footerSocialTitle": "Let's Connect",
+        "footerSocialDesc": "Have an idea? Let's work together to make it a reality.",
+        "statExp": "Years Exp.",
+        "statProjects": "Projects",
+        "statCerts": "Certificates",
+        "statPassion": "Passion",
+        "footerText": "© 2025 Juan Ramón Torres Guzmán. Developed with passion and clean code."
     }
 };
 
-// ===== ANIMACIONES =====
+// ===== ANIMACIONES DE ENTRADA (Intersection Observer) =====
 function activateAnimation() {
-    const elements = document.querySelectorAll('.hidden, .card, .testimonial-item');
+    const elements = document.querySelectorAll('.hidden, .card, .testimonial-item, .soft-skill-pill, .project-card');
+
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                if (entry.target.classList.contains('card')) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-                observer.unobserve(entry.target);
+                // Delay escalonado para elementos en grid
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }, index * 100);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     elements.forEach((el) => {
-        if (!el.classList.contains('visible')) {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "all 0.6s ease-out";
-        }
         observer.observe(el);
     });
 }
+
+// ===== TERMINAL INTERACTIVA (Innovation Factor) =====
+function initTerminal() {
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalBody = document.getElementById('terminal-body');
+
+    if (!terminalInput || !terminalBody) return;
+
+    const commands = {
+        'help': 'Comandos disponibles: <b>about</b>, <b>skills</b>, <b>contact</b>, <b>clear</b>, <b>projects</b>',
+        'about': 'Juan Torres: Software Developer enfocado en .NET y Web moderna.',
+        'skills': 'C#, .NET Core, SQL Server, JavaScript, Python, Bootstrap.',
+        'contact': 'Encuéntrame en <a href="https://github.com/JuanRamonTG" class="text-info">GitHub</a> o vía <a href="mailto:contato@example.com" class="text-info">Email</a>.',
+        'projects': 'He desarrollado sistemas Contables, Farmacéuticos y plataformas para Huertos Urbanos.',
+        'clear': 'CLEAR'
+    };
+
+    terminalInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const input = terminalInput.value.toLowerCase().trim();
+            const response = commands[input] || `Comando no reconocido: '${input}'. Escribe <b>help</b> para ver opciones.`;
+
+            if (input === 'clear') {
+                terminalBody.innerHTML = '';
+            } else {
+                const line = document.createElement('div');
+                line.className = 'terminal-line mb-2';
+                line.innerHTML = `<span class="text-accent">> ${input}</span><br><span class="text-secondary">${response}</span>`;
+                terminalBody.appendChild(line);
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+
+            terminalInput.value = '';
+        }
+    });
+
+    // Auto-focus al hacer clic en el terminal
+    document.querySelector('.terminal-container')?.addEventListener('click', () => {
+        terminalInput.focus();
+    });
+}
+
 
 // ===== SISTEMA DE TRADUCCIÓN POR DICCIONARIO =====
 function applyAutoTranslation(lang) {
@@ -180,6 +243,7 @@ function applyAutoTranslation(lang) {
 // ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', () => {
     activateAnimation();
+    initTerminal();
 
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
@@ -218,6 +282,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     bootstrap.Collapse.getInstance(navbarCollapse).hide();
                 }
             }
+        });
+    });
+
+    // ===== SCROLL TO TOP LOGIC =====
+    const backToTopBtn = document.getElementById("btn-back-to-top");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 });
