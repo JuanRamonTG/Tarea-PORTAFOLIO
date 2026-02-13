@@ -97,6 +97,22 @@ section {
   letter-spacing: 1px;
   padding: 6px 15px !important;
   transition: var(--transition);
+  margin-top: 5px;
+  /* Ajuste manual para centrar con el texto de nav-link */
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+}
+
+@media (min-width: 992px) {
+  #languageToggle {
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
 }
 
 #languageToggle:hover {
